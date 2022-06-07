@@ -1,0 +1,65 @@
+{
+  "data": {
+    "id": "28aba4df-240c-4567-82fe-26aea9faf1a2",
+    "type": "poll_results",
+    "attributes": {
+      "results": {
+        "sections": [
+          {
+            "id": 66,
+            "questions": [
+              {
+                "id": 269,
+                "text": "I keep a record of what I earn each month.",
+                "answers": [
+                  {
+                    "id": 1064,
+                    "text": "Yes",
+                    "count": 200
+                  },
+                  {
+                    "id": 1065,
+                    "text": "No",
+                    "count": 100
+                  }
+                ]
+              },
+              {
+                "id": 271,
+                "text": "I borrow someone elses Disney+ subscription",
+                "answers": [
+                  {
+                    "id": 1064,
+                    "text": "Yes",
+                    "count": 200
+                  },
+                  {
+                    "id": 1065,
+                    "text": "No",
+                    "count": 50
+                  }
+                ]
+              },
+              {
+                "id": 272,
+                "text": "I am a cable cutter.",
+                "answers": [
+                  {
+                    "id": 1064,
+                    "text": "Yes",
+                    "count": 50
+                  },
+                  {
+                    "id": 1065,
+                    "text": "No",
+                    "count": 200
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "outputDirectory": "test/ui/cypress",
+  "sourceCodeModifications": ["deleteItBlock", "disableApplitools"],
+  "models": [
+    {
+      "description": "Google",
+      "modelId": 101191,
+      "profileId": 104154
+    },
+    {
+      "description": "Example Module",
+      "modelTag": "test-generator-acceptance-testing"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "modules": {
+    "blocks": [
+      {
+        "type": "component",
+        "path": "ui/skip-to-main-content",
+        "configs": true
+      },
+      {
+        "type": "component",
+        "path": "ui/menu-container",
+        "parameters": {
+          "menuText": "Menu",
+          "exitText": "Back to Main Menu",
+          "closeText": "Close",
+          "moduleTitle": "moduleTitle",
+          "moduleDesc": "moduleDescription",
+          "icon_before": "fas fa-home-alt"
+        }
+      }
+    ]
+  }
+}

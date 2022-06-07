@@ -1,0 +1,13 @@
+{
+  "course-templates": {
+    "course-templates-activity": {
+      "single-column": {
+        "pageHeader": "Single Column Template Example",
+        "subtitleText": "This is optional subtitle text.",
+        "instructionText": "This is optional instruction text.",
+        "loremText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu eros cursus, facilisis mi id, finibus libero. Suspendisse mattis egestas lacinia. Sed consequat erat diam, a porta mauris convallis ut. Praesent consectetur posuere lectus ut luctus. Quisque commodo tellus sed ligula tincidunt viverra nec ac quam. Sed feugiat hendrerit lacinia. Integer laoreet erat eu nisi tempor, quis eleifend ligula vehicula.",
+        "loremText2": "Nam condimentum hendrerit ipsum ut euismod. Nam faucibus consectetur sapien in rutrum. Integer lectus felis, ornare nec condimentum non, varius at nisl. Etiam at bibendum odio, vitae finibus velit."
+      }
+    }
+  }
+}

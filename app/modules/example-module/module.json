@@ -1,0 +1,46 @@
+{
+  "key": "example-module",
+  "title": "Example module",
+  "unlocked": "true",
+  "description": "Example",
+  "index": 0,
+  "group": 0,
+  "id": "example_module",
+  "module_word": "module_word",
+  "begin_word": "begin_word",
+  "activities": [
+    {
+      "title": "example module activity",
+      "key": "example-module-activity",
+      "pages": [
+        {
+          "key": "page-1",
+          "index": 1,
+          "script": false
+        },
+        {
+          "key": "page-2",
+          "script": false,
+          "index": 2
+        },
+        {
+          "key": "page-3",
+          "script": false,
+          "index": 3
+        },
+        {
+          "key": "page-4",
+          "script": false,
+          "index": 4
+        },
+        {
+          "key": "page-5",
+          "script": false,
+          "index": 5
+        }
+      ],
+      "index": 1
+    }
+  ],
+  "groupId": 1
+}

@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "home": {
+      "blocks": [
+        {
+          "type": "component",
+          "class": "m-stack-xl",
+          "configs": {
+            "init": true
+          },
+          "path": "partial/organisms/module_menu",
+          "parameters": {
+            "horizontal": "",
+            "clickable_card": ""
+          }
+        }
+      ]
+    }
+  }
+}

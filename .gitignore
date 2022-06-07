@@ -1,0 +1,39 @@
+# Ignore videos, these need to be transcoded and uploaded to S3
+app/assets/videos/*
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+nbproject
+Thumbs.db
+
+# yarn/npm
+*.pnp
+.pnp.js
+yarn-error.log
+node_modules/
+
+# output folder.
+public/
+
+# automated files
+app/styles/_course.scss
+app/styles/_pages.scss
+
+# test files
+test/ui/test-results

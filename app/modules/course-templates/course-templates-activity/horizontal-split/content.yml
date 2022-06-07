@@ -1,0 +1,77 @@
+blocks:
+  - type: component
+    path: horizontal-split
+    parameters:
+      # maxwidth: true
+      # background:
+      #   type: image
+      #   path: https://via.placeholder.com/768x432/EEEEEE/DDDDDD/?text=MOBILE+16x9
+      #   color: 'rgba(0,0,0,0.4)'
+      header: primary_region.pageHeader
+      subtitle: primary_region.subtitleText
+      intro_text:
+        - description: primary_region.text1
+      instructions:
+        text: primary_region.instructionText
+        icon_prefix: fas
+        icon_name: fa-cog
+      navigation:
+        back: true
+        next: true
+
+      primary:
+        enable: true
+        image: https://via.placeholder.com/768x432/EEEEEE/DDDDDD/?text=MOBILE+16x9
+        # lottie:
+        #   id: lottie1
+        #   path: images/lottie/mall.json
+        #   width: 200px
+        #   loop: -1
+        #   fromFrame: 10
+        #   toFrame: 50
+        #   delay: 1
+        blocks:
+          - type: text
+            items:
+              - description: loremText2
+                class: p1 m-stack-md
+      secondary:
+        enable: true
+        full_height: true
+        # image: https://via.placeholder.com/200x432/EEEEEE/DDDDDD/?text=MOBILE+16x9
+        navigation: true
+        blocks:
+          - type: text
+            items:
+              - description: loremText2
+                class: p1 m-stack-md
+          - type: accordion
+            icon_visited: true
+            allowMultiple: false
+            heading_level: h4
+            scrollPane: 'html, body'
+            bellows:
+              - header: headerText
+                sr_header_text: headerText
+                body_region:
+                  blocks:
+                    - type: text
+                      items:
+                        - description: loremText
+                          class: p1
+              - header: headerText
+                sr_header_text: accord1-header-2
+                body_region:
+                  blocks:
+                    - type: text
+                      items:
+                        - description: loremText2
+                          class: p1
+              - header: headerText
+                sr_header_text: headerText
+                body_region:
+                  blocks:
+                    - type: text
+                      items:
+                        - description: loremText3
+                          class: p1

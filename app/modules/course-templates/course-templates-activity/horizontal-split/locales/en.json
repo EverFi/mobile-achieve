@@ -1,0 +1,22 @@
+{
+  "course-templates": {
+    "course-templates-activity": {
+      "horizontal-split": {
+        "primary_region": {
+          "pageHeader": "Horizontal Split Template Example",
+          "subtitleText": "This is subtitle text",
+          "instructionText": "This is instruction text for the left!",
+          "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu eros cursus, facilisis mi id, finibus libero. Suspendisse mattis egestas lacinia. Sed consequat erat diam, a porta mauris convallis ut. Praesent consectetur posuere lectus ut luctus. Quisque commodo tellus sed ligula tincidunt viverra nec ac quam.",
+          "text2": "Nullam vitae pretium nibh, et porta enim. Nam in ultrices felis. Proin ut tortor viverra, pulvinar turpis dapibus, tempus libero. Curabitur efficitur tempor nulla. In dictum sodales leo, at lacinia urna semper vel. Mauris massa tortor, dictum et lectus et, consectetur ullamcorper lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer non nulla metus. Duis at fringilla nunc."
+        },
+        "secondary_region": {
+          "instructionText": "This is instruction text for the right!"
+        },
+        "headerText": "Header",
+        "loremText": "Morbi dapibus eleifend posuere. Sed nec dapibus nulla. Cras sagittis sapien felis, id pharetra nunc vulputate et. Donec aliquam, leo vitae fringilla sollicitudin, turpis libero rutrum eros, sodales auctor quam risus in leo.",
+        "loremText2": " Cras a gravida dolor. Morbi posuere ex ut ultrices euismod. Nam id urna odio. Nam convallis elementum nisl, a malesuada lectus viverra non.",
+        "loremText3": "Suspendisse potenti. Morbi at pulvinar mi. Curabitur metus ligula, tempor ut finibus in, malesuada ut justo. Nunc eu ante eu est elementum imperdiet."
+      }
+    }
+  }
+}

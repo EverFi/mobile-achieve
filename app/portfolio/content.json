@@ -1,0 +1,11 @@
+{
+  "portfolio": {
+    "contents": {
+      "reasons-checklist": {
+        "type": "checklist",
+        "title": "meow",
+        "grouped_by_module": true
+      }
+    }
+  }
+}

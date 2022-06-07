@@ -1,0 +1,86 @@
+blocks:
+  - type: component
+    path: vertical-split
+    parameters:
+      # maxwidth: true
+      header: primary_region.pageHeader
+      subtitle: primary_region.subtitleText
+      navigation:
+        back: false
+      primary:
+        # background:
+        #   type: image
+        #   path: https://via.placeholder.com/300x300/EEEEEE/DDDDDD/?text=MOBILE+16x9
+        #   color: "rgba(0,0,0,0.8)"
+        # class: p-inset-md bg-color-neutral-100 border-radius-md m-stack-md elevation-4
+        enable: true
+        maxwidth: false
+        columns: 8
+        instructions:
+          text: primary_region.instructionText
+          icon_prefix: fas
+          icon_name: fa-cog
+        intro_text:
+          - description: primary_region.text
+      asset:
+        enable: true
+        image: https://via.placeholder.com/300x300/EEEEEE/DDDDDD/?text=MOBILE+16x9
+      regions:
+        - background:
+            type: color
+            color: 'rgba(0,0,0,0.2)'
+            # color: "#0072e5"
+          blocks:
+            - type: layout
+              path: grid/grid-dynamic
+              regions:
+                - columns: 4
+                  blocks:
+                    - type: image
+                      images:
+                        - path: images/structure/img-placeholder_2.png
+                - columns: 8
+                  blocks:
+                    - type: text
+                      class: p1
+                      items:
+                        - description: lorem
+        - background:
+            type: color
+            color: 'rgba(0,0,0,0.4)'
+          narrow: true
+          blocks:
+            - type: layout
+              path: grid/grid-dynamic
+              regions:
+                - columns: 8
+                  blocks:
+                    - type: text
+                      class: p1
+                      items:
+                        - description: lorem
+                - columns: 4
+                  blocks:
+                    - type: image
+                      images:
+                        - path: images/structure/img-placeholder_1.png
+        - background:
+            type: color
+            color: 'rgba(0,0,0,0.2)'
+          # navigation:
+          #   back: false
+          blocks:
+            - type: layout
+              path: grid/grid-dynamic
+              regions:
+                - columns: 4
+                  blocks:
+                    - type: image
+                      images:
+                        - path: images/structure/img-placeholder_2.png
+                - columns: 8
+                  blocks:
+                    - type: text
+                      class: p1
+                      items:
+                        - description: lorem

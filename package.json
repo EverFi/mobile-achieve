@@ -1,0 +1,24 @@
+{
+  "author": "EverFi",
+  "name": "mobile-achieve",
+  "description": "Mobile Achieve Content",
+  "version": "0.0.1",
+  "homepage": "https://everfi-curriculums.s3.amazonaws.com/curriculums/mobile-achieve/develop/index.html#",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EverFi/mobile-achieve"
+  },
+  "scripts": {
+    "start": "ecc"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/pro-light-svg-icons": "^5.8.1",
+    "@fortawesome/pro-regular-svg-icons": "^5.8.1",
+    "@fortawesome/pro-solid-svg-icons": "^5.8.1",
+    "components": "https://everfi-curriculums.s3.amazonaws.com/components/components-3-22-0.tgz"
+  },
+  "installConfig": {
+    "pnp": true
+  }
+}

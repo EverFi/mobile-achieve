@@ -1,0 +1,98 @@
+{
+  "seed": "2a294251-217c-4ca7-87fe-ef78cac7fa0b",
+  "questions": [
+    {
+      "id": 743,
+      "text": "When you take out a student loan, why do you end up repaying more than you originally borrowed?",
+      "correct_answer": "D",
+      "answers": [
+        {
+          "id": "A",
+          "text": "Because you were never told the original loan amount.",
+          "correct": false,
+          "feedback": {
+            "region": "response",
+            "incorrect": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "items": [{ "description": "failure feedback" }]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "B",
+          "text": "Because you shortened the term of your loan plan.",
+          "correct": false,
+          "feedback": {
+            "region": "response",
+            "incorrect": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "items": [{ "description": "failure feedback" }]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "C",
+          "text": "Because you are paying the principal in addition to the original loan amount.",
+          "correct": false,
+          "feedback": {
+            "region": "response",
+            "incorrect": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "items": [{ "description": "failure feedback" }]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "D",
+          "text": "Because you pay interest on a student loan. ",
+          "correct": true,
+          "feedback": {
+            "region": "response",
+            "correct": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "items": [{ "description": "correct feedback" }]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 744,
+      "text": "Loan repayment methods are designed to help you repay your student loan given different stages of financial stability. When monthly loan payments increase over time, that method is known as",
+      "correct_answer": "B",
+      "answers": [
+        { "id": "A", "text": "Standard" },
+        { "id": "B", "text": "Graduated" },
+        { "id": "C", "text": "Capitalized interest" },
+        { "id": "D", "text": "Discretionary income" }
+      ]
+    },
+    {
+      "id": 745,
+      "text": "What should you do if you are having trouble making your monthly loan payments?",
+      "correct_answer": "C",
+      "answers": [
+        { "id": "A", "text": "Just make the payments when you can" },
+        { "id": "B", "text": "Stop making payments altogether" },
+        { "id": "C", "text": "Call your servicer for help" },
+        { "id": "D", "text": "Leave town and don’t provide a forwarding address" }
+      ]
+    }
+  ]
+}

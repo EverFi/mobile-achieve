@@ -1,0 +1,195 @@
+{
+  "data": {
+    "id": "21235e41-02cc-4d43-8e02-3e29406a4923",
+    "type": "response_sets",
+    "attributes": {
+      "time_taken": null,
+      "fields": {},
+      "answers": [
+        {
+          "question_id": 269,
+          "value": 1065,
+          "response_type": "single_selection"
+        }
+      ],
+      "current_section_id": 68,
+      "grade": null,
+      "status": "started",
+      "web_hooks": {},
+      "evaluation_has_started": false
+    },
+    "relationships": {
+      "evaluation": {
+        "data": {
+          "id": "68",
+          "type": "evaluations"
+        }
+      },
+      "sections": {
+        "data": [
+          {
+            "id": "68",
+            "type": "response_set_sections"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "68",
+      "type": "evaluations",
+      "attributes": {
+        "slug": "scenarios-budgeting-for-mortgage",
+        "name": "Budgeting for Mortgage",
+        "description": "Budgeting for Mortgage",
+        "title": "Budgeting for Mortgage",
+        "active": true,
+        "intro_text": null,
+        "passed_text": null,
+        "failure_text": null,
+        "start_date": "2017-09-01",
+        "end_date": "2018-09-01",
+        "passing_grade": 0,
+        "show_results_screen": false,
+        "shuffle": false,
+        "hide_grade": false,
+        "show_intro": true
+      },
+      "relationships": {
+        "sections": {
+          "data": [
+            {
+              "id": "68",
+              "type": "sections"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "68",
+      "type": "response_set_sections",
+      "attributes": {
+        "title": "Budgeting for Mortgage",
+        "active": true,
+        "shuffle": false,
+        "bank": false,
+        "bank_count": null,
+        "position": 1,
+        "completed": false
+      },
+      "relationships": {
+        "questions": {
+          "data": [
+            {
+              "id": "269",
+              "type": "response_set_questions"
+            },
+            {
+              "id": "271",
+              "type": "response_set_questions"
+            },
+            {
+              "id": "272",
+              "type": "response_set_questions"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "269",
+      "type": "response_set_questions",
+      "attributes": {
+        "text": "I keep a record of what I earn each month.",
+        "active": true,
+        "shuffle": false,
+        "position": 1,
+        "responded": true
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "1064",
+              "type": "answers"
+            },
+            {
+              "id": "1065",
+              "type": "answers"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "271",
+      "type": "response_set_questions",
+      "attributes": {
+        "text": "I borrow someone elses Disney+ subscription",
+        "active": true,
+        "shuffle": false,
+        "position": 2,
+        "responded": false
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "1064",
+              "type": "answers"
+            },
+            {
+              "id": "1065",
+              "type": "answers"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "272",
+      "type": "response_set_questions",
+      "attributes": {
+        "text": "I am a cable cutter",
+        "active": true,
+        "shuffle": false,
+        "position": 3,
+        "responded": false
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "1064",
+              "type": "answers"
+            },
+            {
+              "id": "1065",
+              "type": "answers"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "1064",
+      "type": "answers",
+      "attributes": {
+        "text": "Yes",
+        "active": true,
+        "position": 1
+      }
+    },
+    {
+      "id": "1065",
+      "type": "answers",
+      "attributes": {
+        "text": "No",
+        "active": true,
+        "position": 2
+      }
+    }
+  ]
+}

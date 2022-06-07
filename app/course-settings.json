@@ -1,0 +1,126 @@
+{
+  "name": "mobile-achieve",
+  "theme": "core",
+  "media_host": "https://everfi-curriculums.s3.amazonaws.com",
+  "menu": {
+    "homePage": "home",
+    "groups": false,
+    "hide": [],
+    "autoplay": {
+      "modules": []
+    }
+  },
+  "videoCompletionTime": 0,
+  "audioMinimum": 0,
+  "showCompatibilityWarning": false,
+  "hideVideosDuringLoad": false,
+  "defaultVideoPlayer": "dash",
+  "startupScript": "startup",
+  "supported_languages": [
+    "en"
+  ],
+  "surveys": [],
+  "portfolio": {},
+  "accessibility": {
+    "skipKey": "s"
+  },
+  "production": {
+    "media_host": "https://d1vyejqi0lnyjd.cloudfront.net"
+  },
+  "cssTemplate": "styles/custom",
+  "customizationTypes": {},
+  "icons": [
+    {
+      "prefix": "fal",
+      "name": "fa-bed"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-bolt"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-anchor"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-bomb"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-exclamation-triangle"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-wrench"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-magic"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-lightbulb-on"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-circle"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-step-backward"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-step-forward"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-list"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-chevron-circle-left"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-chevron-circle-right"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-expand-alt"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-compress-alt"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-redo"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-undo"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-fingerprint"
+    },
+    {
+      "prefix": "fal",
+      "name": "fa-arrow-right"
+    },
+    {
+      "prefix": "far",
+      "name": "fa-check"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-info-circle"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-map-signs"
+    }
+  ]
+}

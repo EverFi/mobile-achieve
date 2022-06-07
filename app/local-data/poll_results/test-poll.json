@@ -1,0 +1,101 @@
+{
+  "data": {
+    "id": "855d23d0-ef4c-4154-a24a-32099d001119",
+    "type": "poll_results",
+    "attributes": {
+      "results": {
+        "sections": [
+          {
+            "id": 71,
+            "questions": [
+              {
+                "id": 276,
+                "text": "Checking accounts?",
+                "answers": [
+                  {
+                    "id": 1083,
+                    "text": "Very",
+                    "count": 10
+                  },
+                  {
+                    "id": 1084,
+                    "text": "Somewhat",
+                    "count": 3
+                  },
+                  {
+                    "id": 1084,
+                    "text": "Not at all",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "id": 277,
+                "text": "Money market accounts?",
+                "answers": [
+                  {
+                    "id": 1083,
+                    "text": "Very",
+                    "count": 10
+                  },
+                  {
+                    "id": 1084,
+                    "text": "Somewhat",
+                    "count": 50
+                  },
+                  {
+                    "id": 1084,
+                    "text": "Not at all",
+                    "count": 10
+                  }
+                ]
+              },
+              {
+                "id": 278,
+                "text": "Certificates of deposit?",
+                "answers": [
+                  {
+                    "id": 1083,
+                    "text": "Very",
+                    "count": 15
+                  },
+                  {
+                    "id": 1084,
+                    "text": "Somewhat",
+                    "count": 35
+                  },
+                  {
+                    "id": 1084,
+                    "text": "Not at all",
+                    "count": 30
+                  }
+                ]
+              },
+              {
+                "id": 279,
+                "text": "Money market accounts?",
+                "answers": [
+                  {
+                    "id": 1083,
+                    "text": "Very",
+                    "count": 19
+                  },
+                  {
+                    "id": 1084,
+                    "text": "Somewhat",
+                    "count": 31
+                  },
+                  {
+                    "id": 1084,
+                    "text": "Not at all",
+                    "count": 35
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

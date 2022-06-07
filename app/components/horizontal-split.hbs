@@ -1,0 +1,373 @@
+{{!--
+###
+ #  @View
+ #
+ #  @name horizontal-split
+ #  @type component
+ #  @description Horizontal Split course component
+ #  @maturing
+ #  @content
+ #    @contains @object_of 'parameters' with:
+ #      @contains @object_of 'background' with:
+ #        @prop [type] type={string} title="Type of Background" description="Determines the type of background for the outer grid/container."
+ #            "image"
+ #            "color"
+ #        @contains @one_of dependency with:
+ #          @when type = "image":
+ #            @prop path type={string} title="Path" description="Path to Image" @allow imagePicker
+ #            @prop color type={string} title="Color Overlay" description="Enter a color (e.g., '#999' or 'rgb(230,230,230)')"
+ #            @prop size type={string} title="Image Size (Optional)" description="Enter a size for the image (e.g., 100% auto)."
+ #            @prop @advanced position type={string} title="Background Position" description="The location or coordinates that specify where the background image is pinned relative to its container. Accepts one to four valid CSS values. If one value is specified, this is either the edge or the X-coordinate (with the Y-coordinate set to 50%). If two values, X and Y-coordinates.If four values, odd values must be keywords and even values must be units, where the keywords determine the initial edges and the units determine the offset (ex. top 10px right 40px = 10px from the top, 40px from the right edge). The default is top left, or 0 0 (Commonly used options are: center or top or bottom or top left or bottom center or center center or center -266px or center -270px)"
+ #          @end
+ #          @when type = "color":
+ #            @prop color type={string} title="Background color" description="Enter a color (e.g., '#999' or 'rgb(230,230,230)')"
+ #          @end
+ #        @end
+ #      @end
+ #      @prop header type={string} title="Header Text" description="Header for the region without image" @allow localeKeyRTF
+ #      @prop @advanced header_class type={string} title="Header Class" description="Additional class for the page Header"
+ #      @prop subtitle type={string} title="Subtitle Text (Optional)" description="Subtitle for the region without image" @allow localeKeyRTF
+ #      @contains @array_of 'intro_text' with:
+ #        @prop description type={string} title="Intro Text" description="Text for the region without image" @allow localeKeyRTF
+ #        @prop @advanced description_class type={string} title="Description Class" description="Additional class for the text added"
+ #      @end
+ #      @prop @advanced text_class type={string} title="Text Class" description="Overriding class for the subtitle text if not required"
+ #      @contains @object_of 'instructions' with:
+ #        @title 'Instructions (optional)'
+ #        @prop text type={string} title="Instruction Text" @allow localeKeyRTF
+ #        @prop [icon_prefix] type={string} title="Icon Prefix" default="fas"
+ #         "fas"
+ #         "far"
+ #         "fal"
+ #        @prop icon_name type={string} title="Icon Name" default="fa-info-circle"
+ #      @end
+ #      @contains @object_of 'primary' with:
+ #        @title 'Primary Region'
+ #        @prop enable type={boolean} title="Enable Primary Region?" default="false"
+ #        @contains @one_of dependency with:
+ #          @when enable = "true":
+ #            @prop class type={string} title="Class Name(s)" description="Add an additional class for the primary region."
+ #            @prop columns type={integer} title="Columns" description="Enter the number of columns for the primary region." minimum="1" maximum="12" default="6"
+ #            @prop image type={string} title="Image" description="Image path for the primary region" @allow imagePicker
+ #            @prop @advanced image_description type={string} title="Alt Text" description="Decorative images should have an empty alt tag for screen readers" @allow localeKeyPlain
+ #            @contains @advanced @object_of 'lottie' with:
+ #              @prop id type={string} title="Unique Lottie ID"
+ #              @prop path type={string} title="Lottie File Path" description="The file that exported from After Effects; file (should have extension '.json')"
+ #              @prop loop type={integer} title="How many times to Loop?" description="Set to -1 to loop infinitely; set to 0 to play once; set to 1 to play twice, etc. Default is to play once."
+ #              @prop delay type={number} title="Delay" default="0" description="Delay (in seconds) before the animation plays"
+ #              @prop width type={string} title="Maximum Width" description="Set the maximum width of the Lottie (e.g., '100px')"
+ #              @prop fromFrame type={integer} minimum="0" title="Start Frame"
+ #              @prop toFrame type={integer} minimum="0" title="End Frame"
+ #              @prop autoplay type={boolean} title="Autoplay?" default="false"
+ #            @end
+ #            @contains @array_of 'blocks' with:
+ #              @title 'These blocks will only render if image or lottie is present in secondary region'
+ #              @includes: {{blocks}}
+ #            @end
+ #            @prop narrow type={boolean} title="Set the primary region container's maxwidth to 672px?" default="false"
+ #            @prop full_height type={boolean} title="Enabling this adds the 'align-stretch' class to the primary region." default="false"
+ #          @end
+ #        @end
+ #      @end
+ #      @contains @object_of 'secondary' with:
+ #        @title 'Secondary Region'
+ #        @prop enable type={boolean} title="Enable Secondary Region?" default="false"
+ #        @contains @one_of dependency with:
+ #          @when enable = "true":
+ #            @contains @object_of 'background' with:
+ #              @prop [type] type={string} title="Type of Background" description="Determines the type of background for the region."
+ #                "image"
+ #                "color"
+ #              @contains @one_of dependency with:
+ #                @when type = "image":
+ #                  @prop path type={string} title="Path" description="Path to Image" @allow imagePicker
+ #                  @prop color type={string} title="Color Overlay" description="Enter a color (e.g., '#999' or 'rgb(230,230,230)')"
+ #                  @prop size type={string} title="Image Size (Optional)" description="Enter a size for the image (e.g., 100% auto)."
+ #                  @prop @advanced position type={string} title="Background Position" description="The location or coordinates that specify where the background image is pinned relative to its container. Accepts one to four valid CSS values. If one value is specified, this is either the edge or the X-coordinate (with the Y-coordinate set to 50%). If two values, X and Y-coordinates.If four values, odd values must be keywords and even values must be units, where the keywords determine the initial edges and the units determine the offset (ex. top 10px right 40px = 10px from the top, 40px from the right edge). The default is top left, or 0 0 (Commonly used options are: center or top or bottom or top left or bottom center or center center or center -266px or center -270px)"
+ #                @end
+ #                @when type = "color":
+ #                  @prop color type={string} title="Background color" description="Enter a color (e.g., '#999' or 'rgb(230,230,230)')"
+ #                @end
+ #              @end
+ #            @end
+ #            @prop class type={string} title="Class Name(s)" description="Add an additional class for the secondary region."
+ #            @prop columns type={integer} title="Columns" description="Enter the number of columns for the secondary region." minimum="1" maximum="12" default="6"
+ #            @prop image type={string} title="Image" description="Image path for the secondary region" @allow imagePicker
+ #            @prop @advanced image_description type={string} title="Alt Text" description="Decorative images should have an empty alt tag for screen readers" @allow localeKeyPlain
+ #            @contains @advanced @object_of 'lottie' with:
+ #              @prop id type={string} title="Unique Lottie ID"
+ #              @prop path type={string} title="Lottie File Path" description="The file that exported from After Effects; file (should have extension '.json')"
+ #              @prop loop type={integer} title="How many times to Loop?" description="Set to -1 to loop infinitely; set to 0 to play once; set to 1 to play twice, etc. Default is to play once."
+ #              @prop delay type={number} title="Delay" default="0" description="Delay (in seconds) before the animation plays"
+ #              @prop width type={string} title="Maximum Width" description="Set the maximum width of the Lottie (e.g., '100px')"
+ #              @prop fromFrame type={integer} minimum="0" title="Start Frame"
+ #              @prop toFrame type={integer} minimum="0" title="End Frame"
+ #              @prop autoplay type={boolean} title="Autoplay?" default="false"
+ #            @end
+ #            @contains @array_of 'blocks' with:
+ #              @includes: {{blocks}}
+ #            @end
+ #            @prop narrow type={boolean} title="Set the primary region container's maxwidth to 672px?" default="false"
+ #            @prop full_height type={boolean} title="Enabling this adds the 'align-stretch' class to the primary region." default="false"
+ #          @end
+ #        @end
+ #      @end
+ #      @contains @object_of 'navigation' with:
+ #        @title 'Navigation'
+ #        @prop class type={string} title="Navigation Button Class Name(s)" description="Add an additional class for the navigation buttons."
+ #        @prop back type={boolean} title="Disable this to hide the left navigation button" default="true"
+ #        @prop next type={boolean} title="Disable this to hide the right navigation button" default="true"
+ #        @prop position type={string} title="Next Button Position" description="flex-start= left, flex-end=right"
+ #      @end
+ #      @prop @advanced container_class type={string} title="Container Class Name(s)" description="Add an additional class for the outer grid/container."
+ #      @prop @advanced maxwidth type={boolean} title="Enable this to add a maxwidth property for the outer grid/container."
+ #      @prop @advanced class type={string} title="Region Class Name(s)" description="Add an additional class for the outer grid/region."
+ #      @prop @advanced columns type={integer} title="Columns" description="Enter the number of columns for the outer grid/region." minimum="1" maximum="12" default="12"
+ #    @end
+##
+--}}
+
+{{!-- Please see course-templates/horizontal-split page in Skeletor for sample usage --}}
+
+blocks:
+  - type: container
+    {{#if background}}
+    min_height: 'calc(100vh - 108px)'
+    background:
+      type: {{background.type}}
+      settings:
+        {{#if (equal background.type 'image')}}
+        path: {{background.path}}
+        size: {{#if background.size}}{{background.size}}{{else}}cover{{/if}}
+        overlay: {{background.color}}
+        {{#if background.position}}
+        position: {{background.position}}{{/if}}
+        {{else}}
+        color: {{background.color}}
+        {{/if}}
+    {{/if}}
+    class: {{class}}
+    blocks:
+      - type: layout
+        path: grid/grid-dynamic
+        {{#if maxwidth}}
+        disableGap: row
+        {{else}}
+        disableGap: all
+        {{/if}}
+        {{#if maxwidth}}
+        maxwidth: true
+        {{/if}}
+        regions:
+          {{#if primary.enable}}
+          - columns: {{#if primary.columns}}{{primary.columns}}{{else}}6{{/if}}
+            class: primary-region span-8-tablet {{primary.class}} {{#if background}}align-stretch{{/if}} {{#unless maxwidth}}p-inset-stretch-md{{/unless}} {{#if maxwidth}}p-stack-top-lg{{/if}}
+            blocks:
+              - type: container
+                {{#unless maxwidth}}
+                max_width: 672px
+                container_class: m-center
+                {{/unless}}
+                blocks:
+                  {{#if primary.image}}
+                  - type: image
+                    class: m-stack-md text-center {{#if primary.image_class}}{{primary.image_class}}{{/if}}
+                    images:
+                      - path: {{primary.image}}
+                        {{#if primary.image_description}}
+                        description: {{primary.image_description}}
+                        {{/if}}
+                  {{/if}}
+                  {{#if header}}
+                  - type: header
+                    class: h1 {{header_class}}
+                    h1:
+                      - {{header}}
+                  {{/if}}
+                  {{#if subtitle}}
+                  - type: text
+                    items:
+                      - description: {{subtitle}}
+                        class: subtitle {{#if text_class}}{{text_class}}{{/if}}
+                  {{/if}}
+                  {{#if intro_text}}
+                  - type: text
+                    class: m-stack-lg
+                    items:
+                    {{#each intro_text}}
+                      - description: {{t description}}
+                        class: p1 {{#if description_class}}{{description_class}}{{/if}}
+                    {{/each}}
+                  {{/if}}
+                  
+                  {{#compare secondary.image "||" secondary.lottie}}
+                  {{#if instructions}}
+                  - type: container
+                    flex: true
+                    align: start
+                    justify: flex-start
+                    wrap: nowrap
+                    class: {{#if instructions.class}}{{instructions.class}}{{else}}m-stack-top-md{{/if}}
+                    blocks:
+                      - type: icon
+                        class: p2 text-emphasis m-inline-xs
+                        size: fa-lg
+                        prefix: {{#if instructions.icon_prefix}}{{instructions.icon_prefix}}{{else}}fas{{/if}}
+                        name: {{#if instructions.icon_name}}{{instructions.icon_name}}{{else}}fa-info-circle{{/if}}
+                      - type: text
+                        class: p2 text-emphasis bold
+                        items:
+                          - description: {{instructions.text}}
+                  {{/if}}
+                  {{/compare}}
+                  {{#if primary.blocks}}
+                  - type: container
+                    class: m-stack-lg
+                    blocks:
+                      {{{yamlize primary.blocks 22}}}
+                  {{/if}}
+
+                  {{#compare secondary.image "||" secondary.lottie}}
+                  - type: container
+                    class: m-stack-lg
+                    flex: true
+                    align: start
+                    justify: {{#unless (equal navigation.back false)}}space-between{{else}}{{navigation.position}}{{/unless}}
+                    blocks:
+                      {{#unless (equal navigation.back false)}}
+                      - type: component
+                        path: partial/molecules/navigate
+                        parameters:
+                          direction: back
+                          text: backButton
+                          button_class: {{navigation.class}}
+                      {{/unless}}
+                      {{#unless (equal navigation.next false)}}
+                      - type: component
+                        path: partial/molecules/navigate
+                        parameters:
+                          direction: forward
+                          text: forwardButton
+                          button_class: {{navigation.class}}
+                      {{/unless}}
+                  {{/compare}}
+          {{/if}}
+          {{#if secondary.enable}}
+          - columns: {{#if secondary.columns}}{{secondary.columns}}{{else}}6{{/if}}
+            class: span-8-tablet {{#if secondary.class}}{{secondary.class}}{{/if}}
+            blocks:
+              - type: container
+                {{#if secondary.background}}
+                background:
+                  type: {{secondary.background.type}}
+                  settings:
+                    {{#if (equal secondary.background.type 'image')}}
+                    path: {{secondary.background.path}}
+                    size: {{#if secondary.background.size}}{{secondary.background.size}}{{else}}cover{{/if}}
+                    {{#if secondary.background.position}}
+                    position: {{secondary.background.position}}{{/if}}
+                    overlay: {{secondary.background.color}}
+                    {{else}}
+                    color: {{secondary.background.color}}
+                    {{/if}}
+                {{/if}}
+                class: {{class}}
+                blocks:
+                  - type: container
+                    class: secondary-region {{#unless maxwidth}}p-inset-stretch-md{{/unless}} {{#if maxwidth}}p-stack-top-lg{{/if}}
+                    {{#unless maxwidth}}
+                    {{#unless image}}
+                    max_width: 672px
+                    container_class: m-center
+                    {{/unless}}
+                    {{/unless}}
+                    blocks:
+                      {{#if secondary.image}}
+                      - type: image
+                        class: text-center{{secondary.image_class}}
+                        images:
+                          - path: {{secondary.image}}
+                            description: {{secondary.image_description}}
+                      {{else if secondary.lottie}}
+                      - type: lottie
+                        class: text-center m-center m-stack-top-lg
+                        animations:
+                          - id: {{secondary.lottie.id}}
+                            path: {{secondary.lottie.path}}
+                            width: {{secondary.lottie.width}}
+                            loop: {{secondary.lottie.loop}}
+                            fromFrame: {{secondary.lottie.fromFrame}}
+                            toFrame: {{secondary.lottie.toFrame}}
+                            delay: {{secondary.lottie.delay}}
+                      {{else if secondary.blocks}}
+                      {{#if instructions}}
+                      - type: container
+                        class: {{#if instructions.class}}{{instructions.class}}{{else}}m-stack-top-lg{{/if}}
+                        flex: true
+                        align: start
+                        justify: flex-start
+                        wrap: nowrap
+                        blocks:
+                          - type: icon
+                            class: p2 text-emphasis m-inline-xs
+                            size: fa-lg
+                            prefix: {{#if instructions.icon_prefix}}{{instructions.icon_prefix}}{{else}}fas{{/if}}
+                            name: {{#if instructions.icon_name}}{{instructions.icon_name}}{{else}}fa-info-circle{{/if}}
+                          - type: text
+                            class: p2 text-emphasis bold
+                            items:
+                              - description: {{instructions.text}}
+                      {{/if}}
+                      - type: container
+                        class: m-stack-lg
+                        blocks:
+                          {{{yamlize secondary.blocks 22}}}
+                      - type: container
+                        flex: true
+                        justify: {{#unless (equal navigation.back false)}}space-between{{else}}{{navigation.position}}{{/unless}}
+                        align: start
+                        wrap: nowrap
+                        blocks:
+                          {{#unless (equal navigation.back false)}}
+                          - type: component
+                            path: partial/molecules/navigate
+                            parameters:
+                              direction: back
+                              text: backButton
+                              button_class: {{navigation.class}}
+                          {{/unless}}
+                          {{#unless (equal navigation.next false)}}
+                          - type: component
+                            path: partial/molecules/navigate
+                            parameters:
+                              direction: forward
+                              text: forwardButton
+                              button_class: {{navigation.class}}
+                          {{/unless}}
+                      {{/if}}
+                      
+                  {{#if secondary.full_height}}
+                  - type: layout
+                    path: grid/grid-dynamic
+                    regions:
+                      - id: spacer1
+                        columns: 12
+                        class: hidden-phone hidden-tablet
+                        minHeight:
+                          calculate:
+                            valueA: 100vh - 108px
+                            valueB: 
+                              - '.secondary-region'
+                            operation: subtract
+                      - id: spacer2
+                        columns: 12
+                        class: hidden-desktop
+                        minHeight:
+                          calculate:
+                            valueA: 100vh - 108px
+                            valueB:
+                              - '.primary-region'
+                              - '.secondary-region'
+                            operation: subtract
+                  {{/if}}
+          {{/if}}

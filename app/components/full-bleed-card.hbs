@@ -1,0 +1,244 @@
+{{!--
+###
+ #  @View
+ #
+ #  @name full-bleed-card
+ #  @type component
+ #  @description Full Bleed + Card course component
+ #  @maturing
+ #  @content
+ #    @contains @object_of 'parameters' with:
+ #      @contains @object_of 'background' with:
+ #        @prop [type] type={string} title="Type of Background" description="Determines the type of background for the outer grid/container."
+ #            "image"
+ #            "color"
+ #        @contains @one_of dependency with:
+ #          @when type = "image":
+ #            @prop path type={string} title="Path" description="Path to Image" @allow imagePicker
+ #            @prop color type={string} title="Color Overlay" description="Enter a color (e.g., '#999' or 'rgb(230,230,230)')"
+ #            @prop size type={string} title="Image Size (Optional)" description="Enter a size for the image (e.g., 100% auto)."
+ #            @prop @advanced position type={string} title="Background Position" description="The location or coordinates that specify where the background image is pinned relative to its container. Accepts one to four valid CSS values. If one value is specified, this is either the edge or the X-coordinate (with the Y-coordinate set to 50%). If two values, X and Y-coordinates.If four values, odd values must be keywords and even values must be units, where the keywords determine the initial edges and the units determine the offset (ex. top 10px right 40px = 10px from the top, 40px from the right edge). The default is top left, or 0 0 (Commonly used options are: center or top or bottom or top left or bottom center or center center or center -266px or center -270px)"
+ #          @end
+ #          @when type = "color":
+ #            @prop color type={string} title="Background color" description="Enter a color (e.g., '#999' or 'rgb(230,230,230)')"
+ #          @end
+ #        @end
+ #      @end
+ #      @prop header type={string} title="Header Text" description="Text for the region's header." @allow localeKeyRTF
+ #      @prop subtitle type={string} title="Subtitle Text (Optional)" description="Subtitle text for the region." @allow localeKeyRTF
+ #      @contains @object_of 'spacer' with:
+ #        @title 'Spacer Region'
+ #        @prop enable type={boolean} title="Enable Spacer Region?" default="false"
+ #        @contains @one_of dependency with:
+ #          @when enable = "true":
+ #            @prop class type={string} title="Class Name(s)" description="Add an additional class for the spacer region."
+ #            @prop columns type={integer} title="Columns" description="Enter the number of columns for the spacer region." minimum="1" maximum="12" default="2"
+ #          @end
+ #        @end
+ #      @end
+ #      @contains @object_of 'card' with:
+ #        @title 'Card Region'
+ #        @prop enable type={boolean} title="Enable Card Region?" default="false"
+ #        @contains @one_of dependency with:
+ #          @when enable = "true":
+ #            @prop class type={string} title="Class Name(s)" description="Add an additional class for the card region."
+ #            @prop columns type={integer} title="Columns" description="Enter the number of columns for the card region." minimum="1" maximum="12" default="10"
+ #          @end
+ #        @end
+ #      @end
+ #      @contains @object_of 'asset' with:
+ #        @title 'Asset Region'
+ #        @prop enable type={boolean} title="Enable Asset Region?" default="false"
+ #        @contains @one_of dependency with:
+ #          @when enable = "true":
+ #            @prop class type={string} title="Class Name(s)" description="Add an additional class for the asset region."
+ #            @prop columns type={integer} title="Columns" description="Enter the number of columns for the asset region." minimum="1" maximum="12" default="12"
+ #            @prop image type={string} title="Image" description="Image path for the asset region" @allow imagePicker
+ #            @prop @advanced image_width type={string} title="Width" description="e.g., 500px Note, this sets the initial width of the image and overrides the original. The width will still decrease with mobile and tablet breakpoints."
+ #            @prop @advanced image_description type={string} title="Alt Text" description="Decorative images should have an empty alt tag for screen readers" @allow localeKeyPlain
+ #            @contains @advanced @object_of 'lottie' with:
+ #              @prop id type={string} title="Unique Lottie ID"
+ #              @prop path type={string} title="Lottie File Path" description="The file that exported from After Effects; file (should have extension '.json')"
+ #              @prop loop type={integer} title="How many times to Loop?" description="Set to -1 to loop infinitely; set to 0 to play once; set to 1 to play twice, etc. Default is to play once."
+ #              @prop delay type={number} title="Delay" default="0" description="Delay (in seconds) before the animation plays"
+ #              @prop width type={string} title="Maximum Width" description="Set the maximum width of the Lottie (e.g., '100px')"
+ #              @prop fromFrame type={integer} minimum="0" title="Start Frame"
+ #              @prop toFrame type={integer} minimum="0" title="End Frame"
+ #              @prop autoplay type={boolean} title="Autoplay?" default="false"
+ #            @end
+ #          @end
+ #        @end
+ #      @end
+ #      @contains @object_of 'content' with:
+ #        @title 'Content Region'
+ #        @prop enable type={boolean} title="Enable Content Region?" default="false"
+ #        @contains @one_of dependency with:
+ #          @when enable = "true":
+ #            @prop class type={string} title="Class Name(s)" description="Add an additional class for the content region."
+ #            @prop columns type={integer} title="Columns" description="Enter the number of columns for the content region." minimum="1" maximum="12" default="12"
+ #            @contains @array_of 'intro_text' with:
+ #              @prop description type={string} title="Intro Text" description="Intro text for the content region." @allow localeKeyRTF
+ #            @end
+ #            @contains @object_of 'instructions' with:
+ #              @title 'Instructions (optional)'
+ #              @prop text type={string} title="Instruction Text" @allow localeKeyRTF
+ #              @prop [icon_prefix] type={string} title="Icon Prefix" default="fas"
+ #                      "fas"
+ #                      "far"
+ #                      "fal"
+ #              @prop icon_name type={string} title="Icon Name" default="fa-info-circle"
+ #            @end
+ #            @contains @array_of 'blocks' with:
+ #              @includes: {{blocks}}
+ #            @end
+ #            @contains @object_of 'navigation' with:
+ #              @title 'Navigation'
+ #              @prop back type={boolean} title="Disable this to hide the left navigation button" default="true"
+ #              @prop next type={boolean} title="Disable this to hide the right navigation button" default="true"
+ #              @prop class type={string} title="Navigation Button Class Name(s)" description="Add an additional class for the navigation buttons."
+ #              @prop position type={string} title="Next Button Position" description="flex-start= left, flex-end=right"
+ #            @end
+ #          @end
+ #        @end
+ #      @end
+ #      @prop @advanced container_class type={string} title="Container Class Name(s)" description="Add an additional class for the outer grid/container."
+ #      @prop @advanced class type={string} title="Region Class Name(s)" description="Add an additional class for the outer grid/region."
+ #      @prop @advanced header_class type={string} title="Header Class Name(s)" description="Add an additional class for the header text."
+ #    @end
+##
+--}}
+
+{{!-- Please see course-templates/full-bleed-card page in Skeletor for sample usage --}}
+
+blocks:
+  - type: container
+    container_class: {{container_class}}
+    {{#if background}}
+    background:
+      type: {{background.type}}
+      settings:
+        {{#if (equal background.type "image")}}
+        path: {{background.path}}
+        size: {{#if background.size}}{{background.size}}{{else}}cover{{/if}}
+        overlay: {{background.color}}
+        {{#if background.position}}
+        backgroundPosition: {{background.position}}{{/if}}
+        {{else}}
+        color: {{background.color}}
+        {{/if}}
+    {{/if}}
+    min_height: calc(100vh - 108px)
+    class: {{class}}
+    blocks:
+      - type: layout
+        path: grid/grid-dynamic
+        maxwidth: true
+        regions:
+          {{#if spacer.enable}}
+          - columns: {{#if spacer.columns}}{{spacer.columns}}{{else}}2{{/if}}
+            class: {{spacer.class}} hidden-phone
+          {{/if}}
+          {{#if card.enable}}
+          - columns: {{#if card.columns}}{{card.columns}}{{else}}8{{/if}}
+            class: {{card.class}} p-stack-top-lg m-stack-lg
+            blocks:
+              - type: layout
+                path: grid/grid-dynamic
+                class: bg-color-neutral-100 border-radius-lg elevation-4 {{#unless asset}}p-inset-md{{/unless}}
+                disableGap: all
+                regions:
+                  {{#if asset.enable}}
+                  - columns: {{#if asset.columns}}{{asset.columns}}{{else}}12{{/if}}
+                    class: {{asset.class}} {{#if asset.lottie}}align-middle{{/if}}
+                    blocks:
+                      {{#if asset.image}}
+                      - type: image
+                        class: text-center
+                        images:
+                          - path: {{asset.image}}
+                            {{#if asset.image_width}}
+                            width: {{asset.image_width}}
+                            {{/if}}
+                            {{#if asset.image_description}}
+                            description: {{asset.image_description}}
+                            {{/if}}
+                      {{/if}}
+                      {{#if asset.lottie}}
+                      - type: lottie
+                        animations:
+                          - id: {{asset.lottie.id}}
+                            path: {{asset.lottie.path}}
+                            width: {{asset.lottie.width}}
+                            loop: {{asset.lottie.loop}}
+                            fromFrame: {{asset.lottie.fromFrame}}
+                            toFrame: {{asset.lottie.toFrame}}
+                            delay: {{asset.lottie.delay}}
+                      {{/if}}
+                  {{/if}}
+                  {{#if content.enable}}
+                  - columns: {{#if content.columns}}{{content.columns}}{{else}}12{{/if}}
+                    class: {{#if asset}}p-inset-md{{/if}} {{content.class}}
+                    blocks:
+                      - type: header
+                        class: {{#if header_class}}{{header_class}}{{else}}h1{{/if}}
+                        h1:
+                          - {{t header}}
+                      {{#if subtitle}}
+                      - type: text
+                        items:
+                          - description: {{t subtitle}}
+                            class: subtitle
+                      {{/if}}
+                      {{#if content.intro_text}}
+                      - type: text
+                        items:
+                        {{#each content.intro_text}}
+                          - description: {{t description}}
+                            class: p1
+                        {{/each}}
+                      {{/if}}
+                      {{#if content.instructions}}
+                      - type: container
+                        flex: true
+                        align: start
+                        justify: flex-start
+                        wrap: nowrap
+                        blocks:
+                          - type: icon
+                            class: p2 text-emphasis m-inline-xs
+                            size: fa-lg
+                            prefix: {{#if content.instructions.icon_prefix}}{{content.instructions.icon_prefix}}{{else}}fas{{/if}}
+                            name: {{#if content.instructions.icon_name}}{{content.instructions.icon_name}}{{else}}fa-info-circle{{/if}}
+                          - type: text
+                            class: p2 text-emphasis bold
+                            items:
+                              - description: {{content.instructions.text}}
+                      {{/if}}
+                      {{#if content.blocks}} 
+                      {{{yamlize content.blocks 26}}}
+                      {{/if}}
+                      - type: container
+                        class: m-stack-top-lg
+                        flex: true
+                        justify: {{#unless (equal content.navigation.back false)}}space-between{{else}}{{content.navigation.position}}{{/unless}}
+                        align: start
+                        wrap: nowrap
+                        blocks:
+                          {{#unless (equal content.navigation.back false)}}
+                          - type: component
+                            path: partial/molecules/navigate
+                            parameters:
+                              direction: back
+                              text: backButton
+                              button_class: {{content.navigation.class}}
+                          {{/unless}}
+                          {{#unless (equal content.navigation.next false)}}
+                          - type: component
+                            path: partial/molecules/navigate
+                            parameters:
+                              direction: forward
+                              text: forwardButton
+                              button_class: {{content.navigation.class}}
+                          {{/unless}}
+                  {{/if}}
+            {{/if}}

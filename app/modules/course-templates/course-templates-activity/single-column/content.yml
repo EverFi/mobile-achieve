@@ -1,0 +1,50 @@
+blocks:
+  - type: component
+    path: single-column
+    parameters:
+      maxwidth: true
+      background:
+        type: color
+        color: 'green'
+      header: pageHeader
+      subtitle: subtitleText
+      image: https://via.placeholder.com/300x300/EEEEEE/DDDDDD/?text=MOBILE+16x9
+      spacer:
+        enable: true
+      primary:
+        enable: true
+        columns: 8
+        intro_text:
+          - description: loremText
+        instructions:
+          text: instructionText
+          icon_prefix: fas
+          icon_name: fa-cog
+        navigation:
+          back: false
+        blocks:
+          - type: text
+            items:
+              - description: loremText2
+                class: p1 m-stack-md
+          - type: video
+            class: video__container
+            video_id: 4s-3_EXP_DealingwithyourMistakes
+            player: dash
+            narration: narration
+            transcript:
+              id: 4s-3_EXP_DealingwithyourMistakes-transcript-1
+              in_controlbar: true
+              header: loremHeader
+              text: loremText
+              body_class: marked-down
+              dismiss_button:
+                text: Close
+              launch_button:
+                text: btn-transcript
+            options:
+              wmode: transparent
+              stretching: fill
+              aspectratio: '16:9'
+              width: 100%
+              height: auto

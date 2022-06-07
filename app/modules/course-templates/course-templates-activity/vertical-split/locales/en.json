@@ -1,0 +1,26 @@
+{
+  "course-templates": {
+    "course-templates-activity": {
+      "vertical-split": {
+        "primary_region": {
+          "pageHeader": "Vertical Split Template Example",
+          "subtitleText": "This is subtitle text",
+          "instructionText": "This is instruction text for the left!",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu eros cursus, facilisis mi id, finibus libero. Suspendisse mattis egestas lacinia. Sed consequat erat diam, a porta mauris convallis ut. Praesent consectetur posuere lectus ut luctus. Quisque commodo tellus sed ligula tincidunt viverra nec ac quam. Sed feugiat hendrerit lacinia. Integer laoreet erat eu nisi tempor, quis eleifend ligula vehicula."
+        },
+        "loremHeader": "Cras sagittis sapien felis",
+        "loremText": "Morbi dapibus eleifend posuere. Sed nec dapibus nulla. Cras sagittis sapien felis, id pharetra nunc vulputate et. Donec aliquam, leo vitae fringilla sollicitudin, turpis libero rutrum eros, sodales auctor quam risus in leo.",
+        "loremText2": " Cras a gravida dolor. Morbi posuere ex ut ultrices euismod. Nam id urna odio. Nam convallis elementum nisl, a malesuada lectus viverra non.",
+        "loremText3": "Suspendisse potenti. Morbi at pulvinar mi. Curabitur metus ligula, tempor ut finibus in, malesuada ut justo. Nunc eu ante eu est elementum imperdiet.",
+        "questionText": "This is the question of the assessment.",
+        "correctText": "This is the correct answer",
+        "incorrectText": "This is an incorrect answer",
+        "incorrectText2": "This is also an incorrect answer",
+        "correctFeedbackHeader": "Correct",
+        "correctFeedbackText": "This is the correct answer!",
+        "incorrectFeedbackHeader": "Incorrect",
+        "incorrectFeedbackText": "This is the wrong answer."
+      }
+    }
+  }
+}

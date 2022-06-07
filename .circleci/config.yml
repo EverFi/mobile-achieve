@@ -1,0 +1,24 @@
+version: 2.1
+
+setup: true
+
+orbs:
+  courses-v2: everfi/courses-v2@1
+
+workflows:
+  main:
+    jobs:
+      - courses-v2/build:
+          filters:
+            branches:
+              ignore:
+                - /test/.*/
+          context:
+            - course-s3-upload
+      - courses-v2/build-and-test-setup:
+          filters:
+            branches:
+              only:
+                - /test/.*/
+          context:
+            - course-s3-upload

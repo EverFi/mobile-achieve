@@ -1,0 +1,12 @@
+blocks:
+  - type: text
+    items:
+      - description: page-4
+  - type: component
+    path: partial/molecules/navigate
+    class: navigate
+    parameters:
+      direction: forward
+      text: forwardButton
+      sr_text: forwardButton
+      title: forwardButton

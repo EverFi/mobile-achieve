@@ -1,0 +1,60 @@
+{
+  "title": "Test Survey Title",
+  "description": "Test Survey Description",
+  "slug": "test-survey",
+  "response_set_url": "https://localhost:3000/fake-api/test-survey",
+  "sections": [
+    {
+      "title": "Test Title",
+      "description": "Test Description",
+      "index": 1,
+      "questions": [
+        {
+          "id": 6,
+          "text": "How would you test question?",
+          "name": "TEST_NAME",
+          "correct_feedback_text": "Test correct feedback text.",
+          "correct_feedback_title": "Test Correct Title",
+          "incorrect_feedback_title": "Test Incorrect Feedback Title",
+          "incorrect_feedback_text": "Test Incorrect Feedback Text",
+          "index": 0,
+          "answers": [
+            {
+              "id": 10,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              "correct": true
+            },
+            {
+              "id": 20,
+              "text": "Consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "text": "How would you test question?",
+          "name": "TEST_NAME",
+          "display_type": "radio",
+          "correct_feedback_text": "Test correct feedback text.",
+          "correct_feedback_title": "Test Correct Title",
+          "incorrect_feedback_title": "Test Incorrect Feedback Title",
+          "incorrect_feedback_text": "Test Incorrect Feedback Text",
+          "index": 2,
+          "answers": [
+            {
+              "id": 30,
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              "correct": true
+            },
+            {
+              "id": 40,
+              "text": "Consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

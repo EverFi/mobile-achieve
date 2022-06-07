@@ -1,0 +1,60 @@
+{
+  "seed": "2a294251-217c-4ca7-87fe-ef78cac7fa0b",
+  "questions": [
+    {
+      "id": 743,
+      "text": "This is a test assessment. Please select one of the options below:",
+      "correct_answer": "A",
+      "answers": [
+        {
+          "id": "A",
+          "text": "This is a correct answer.",
+          "correct": false,
+          "feedback": {
+            "region": "response",
+            "incorrect": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "items": [{ "description": "failure feedback" }]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "A",
+          "text": "This is a correct answer.",
+          "correct": false,
+          "feedback": {
+            "region": "response",
+            "incorrect": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "items": [{ "description": "failure feedback" }]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "A",
+          "text": "This is a correct answer.",
+          "correct": true,
+          "feedback": {
+            "region": "response",
+            "correct": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "items": [{ "description": "correct feedback" }]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

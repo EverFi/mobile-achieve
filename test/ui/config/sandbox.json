@@ -1,0 +1,16 @@
+{
+  "projectId": "rxdhrd",
+  "baseUrl": "https://compliance.fifoundry-sandbox.net",
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 10000,
+  "video": true,
+  "retries": 1,
+  "viewportWidth": 1440,
+  "viewportHeight": 768,
+  "env": {
+    "APPLITOOLS_API_KEY": "awsSecret:qa/ApplitoolsApiKeyProductCourses:value:APPLITOOLS_API_KEY",
+    "ENVIRONMENT": "sandbox",
+    "APPLITOOLS_ENABLED": false,
+    "data": {}
+  }
+}

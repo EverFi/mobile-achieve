@@ -1,0 +1,199 @@
+{{!--   
+        
+  On local, "primary_color" and "secondary_color" come from app/local-data/customizations.json. Otherwise, these values come from Foundry.
+  To view whitelabeling locally, add "cssTemplate": "styles/custom" to app/course-settings.json.
+--}}
+
+{{#if primary_color}}
+
+#site-container .bg-color-brand-primary,
+#site-container .bg-color-interactive-500 {
+  background-color: {{primary_color}} !important;
+}
+
+#site-container .font-color-brand-primary,
+#site-container .font-color-brand-primary > *,
+#site-container .font-color-interactive-500,
+#site-container .font-color-interactive-500 > * {
+  color: {{primary_color}} !important;
+}
+#site-container .border-color-brand-primary {
+  border-color: {{primary_color}} !important;
+}
+
+.branding-primary {
+  fill: {{primary_color}} !important;
+}
+
+button:hover:not(:disabled),
+a:hover {
+  opacity: 0.8 !important;
+}
+
+
+{{!-- Primary Components --}}
+#site-container .btn-primary:not(:disabled), 
+.navigation-bar .navbar,
+.timeline__interval__dot,
+#site-container .hotspot-container .hotspot:not(.clicked),
+#site-container .btn-hotspot,
+#site-container .module-container .course-hub-module-progress-bar,
+#site-container .progression__bar {
+  background-color: {{primary_color}} !important;
+  color: #fff !important;
+}
+
+.progression__circle--progress {
+  stroke: {{primary_color}} !important;
+}
+
+{{!-- Secondary Components--}}
+.bellow__bullet-step,
+.btn-secondary:not(:disabled),
+.label__theme--secondary,
+.timeline__event__dot,
+#site-container .draggable:hover,
+#site-container .activities .activity__list__item--active  {
+  background-color: {{secondary_color}} !important;
+  color: #000 !important;
+  border-color: {{primary_color}} !important;
+}
+
+
+{{!-- Tertiary Components--}}
+#site-container a,
+#site-container a:visited,
+#site-container .activity a, 
+#site-container .bellow__icon-principal,
+#site-container .bellow__icon-secondary,
+.btn-tertiary:not(:disabled), 
+.link,
+.link .link__text {
+  color: {{primary_color}} !important;
+  background: transparent;
+}
+
+{{!-- Icons --}}
+.callout--generic .callout__icon svg,
+#site-container .activities .activity__list__item--active svg,
+#site-container .flipcard-container .flipcard__face__arrow-icon div {
+  color: {{primary_color}} !important;
+}
+
+.video__container .seek__container .seekbar--play {
+  background-color: {{primary_color}} !important;
+
+}
+
+
+{{!-- 
+    Mixed Styling
+    Tabs & inputs use both secondary and tertiary styles, plus shadows as borders, so they require some extra CSS.
+--}}
+
+.choices__label:hover .choices__custom-input-radio,
+.choices__label:hover .choices__custom-input-checkbox,
+.choices--choice-card .choices__label:hover,
+.choices--choice-card .choices__label:active,
+.choices--choice-card .choices__label--checked,
+.field:hover,
+.field:active,
+.field:focus,
+.tabs__tab-bar-button:hover, 
+.tabs__tab-bar-button:active,
+.tabs__tab-bar-button--active,
+.callout--generic {
+  border-color: {{primary_color}} !important;
+}
+
+.choices__label--checked .choices__custom-input-radio, 
+.choices__label--checked .choices__custom-input-checkbox, 
+.choices__label--checked:hover .choices__custom-input-radio, 
+.choices__label--checked:hover .choices__custom-input-checkbox {
+  background-color: {{primary_color}} !important;
+  border-color: {{primary_color}} !important;
+  box-shadow: inset 0 0 0 4px {{primary_color}} !important;
+}
+
+.choices__label:hover .choices__custom-input-radio, 
+.choices__label:hover .choices__custom-input-checkbox,
+choices--choice-card .choices__label:hover, 
+.choices--choice-card .choices__label:active, 
+.choices--choice-card .choices__label--checked,
+.field:hover,
+.tabs.tab-card .tabs__tab-bar-button:hover, 
+.tabs.tab-card .tabs__tab-bar-button--hover  {
+  box-shadow: inset 0 0 0 1px {{primary_color}} !important;
+}
+
+.tabs.tab-card .tabs__tab-bar-button--active,
+.tabs.tab-card .tabs__tab-bar-button:focus,
+.field:active,
+.field:focus,
+.choices--choice-card .choices__label:active,
+.choices--choice-card .choices__label--checked {
+  box-shadow: inset 0 0 0 2px {{primary_color}} !important;
+}
+
+.tabs__tab-bar-button:hover, .tabs__tab-bar-button--hover {
+  box-shadow: inset 0 -2px 0 0 {{primary_color}} !important;
+}
+
+.tabs__tab-bar-button:active, 
+.tabs__tab-bar-button--active, 
+.tabs__tab-bar-button:focus, 
+.tabs__tab-bar-button--focus {
+  box-shadow: inset 0 -4px 0 0 {{primary_color}} !important;
+}
+
+{{/if}}
+
+{{#if secondary_color}}
+
+#site-container .bg-color-brand-secondary,
+#site-container .bg-color-interactive-300 {
+  background-color: {{secondary_color}} !important;
+}
+#site-container .font-color-brand-secondary,
+#site-container .font-color-brand-secondary > * {
+  color: {{secondary_color}} !important;
+}
+#site-container .border-color-brand-secondary {
+  border-color: {{secondary_color}} !important;
+}
+
+.branding-secondary {
+  background: {{secondary_color}} !important;
+  color: #000;
+  fill: {{secondary_color}} !important;
+}
+
+#site-container a:focus,
+#site-container .link:focus,
+#site-container .link:focus .link__text,
+#site-container .activity a:focus {
+  background-color: {{secondary_color}} !important;
+  color: #000 !important;
+}
+
+.choices__label:hover,
+.choices__label:active,
+.choices--choice-card .choices__label:active,
+.choices--choice-card .choices__label--checked,
+.bellow__button__vertical:hover,
+.bellow--header__vertical:hover,
+.bellow__article__vertical,
+.bellow--header__vertical.active .bellow__button__vertical,
+.tabs__tab-bar-button:hover,
+.tabs__tab-bar-button:active,
+.tabs__tab-bar-button--active,
+.link:hover,
+.link:hover .link__text,
+.btn-tertiary:active,
+.btn-tertiary:focus,
+.callout--generic {
+  background-color: {{secondary_color}} !important;
+  color: #000 !important;
+}
+
+{{/if}}

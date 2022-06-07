@@ -1,0 +1,401 @@
+{
+  "file": "app/assets/videos/en/4s-3_EXP_DealingwithyourMistakes.mp4",
+  "key": "4s-3_EXP_DealingwithyourMistakes",
+  "name": "4s-3_EXP_DealingwithyourMistakes",
+  "source": {
+    "base": "4s-3_EXP_DealingwithyourMistakes.mp4",
+    "ext": ".mp4"
+  },
+  "language": "en",
+  "captions": {
+    "file": "app/assets/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+    "base": "4s-3_EXP_DealingwithyourMistakes.vtt",
+    "exist": false
+  },
+  "transcodes": [
+    {
+      "Id": "1585932992485-xpblvl",
+      "OutputKeyPrefix": "curriculums/blacksmith-2/media/videos/en/4s-3_EXP_DealingwithyourMistakes/1585932950705/",
+      "finishedAt": 1585933036551,
+      "Status": "Complete",
+      "Outputs": [
+        {
+          "Id": "1",
+          "Key": "hls/480p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": "hls/480p/4s-3_EXP_DealingwithyourMistakes-{count}",
+          "Rotate": null,
+          "PresetId": "1462914087387-iedh2r",
+          "SegmentDuration": "4.0",
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 854,
+          "Height": 480,
+          "FrameRate": "29.97",
+          "FileSize": 23944244,
+          "DurationMillis": 66879,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "2",
+          "Key": "hls/720p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": "hls/720p/4s-3_EXP_DealingwithyourMistakes-{count}",
+          "Rotate": null,
+          "PresetId": "1435843564865-la7te2",
+          "SegmentDuration": "4.0",
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 1280,
+          "Height": 720,
+          "FrameRate": "29.97",
+          "FileSize": 23725036,
+          "DurationMillis": 66879,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "3",
+          "Key": "hls/1080p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": "hls/1080p/4s-3_EXP_DealingwithyourMistakes-{count}",
+          "Rotate": null,
+          "PresetId": "1426276620673-7a129k",
+          "SegmentDuration": "4.0",
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 1920,
+          "Height": 1080,
+          "FrameRate": "29.97",
+          "FileSize": 34742776,
+          "DurationMillis": 66879,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "4",
+          "Key": "mp4/480p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": null,
+          "Rotate": null,
+          "PresetId": "1435844261521-ym4hbg",
+          "SegmentDuration": null,
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 854,
+          "Height": 480,
+          "FrameRate": "29.97",
+          "FileSize": 11334374,
+          "DurationMillis": 66874,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "5",
+          "Key": "mp4/720p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": null,
+          "Rotate": null,
+          "PresetId": "1435844190196-fskiwc",
+          "SegmentDuration": null,
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 1280,
+          "Height": 720,
+          "FrameRate": "29.97",
+          "FileSize": 21822139,
+          "DurationMillis": 66874,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "6",
+          "Key": "mp4/1080p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": null,
+          "Rotate": null,
+          "PresetId": "1351620000001-000001",
+          "SegmentDuration": null,
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 1920,
+          "Height": 1080,
+          "FrameRate": "29.97",
+          "FileSize": 48056775,
+          "DurationMillis": 66874,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "7",
+          "Key": "dash/audio/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": null,
+          "Rotate": null,
+          "PresetId": "1351620000001-500060",
+          "SegmentDuration": "4.0",
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": null,
+          "Height": null,
+          "FrameRate": null,
+          "FileSize": 1085253,
+          "DurationMillis": 66880,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "8",
+          "Key": "dash/480p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": null,
+          "Rotate": null,
+          "PresetId": "1351620000001-500030",
+          "SegmentDuration": "4.0",
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 854,
+          "Height": 480,
+          "FrameRate": "30",
+          "FileSize": 20130491,
+          "DurationMillis": 66834,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "9",
+          "Key": "dash/720p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": null,
+          "Rotate": null,
+          "PresetId": "1351620000001-500020",
+          "SegmentDuration": "4.0",
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 1280,
+          "Height": 720,
+          "FrameRate": "30",
+          "FileSize": 40127831,
+          "DurationMillis": 66834,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        },
+        {
+          "Id": "10",
+          "Key": "dash/1080p/4s-3_EXP_DealingwithyourMistakes",
+          "ThumbnailPattern": null,
+          "Rotate": null,
+          "PresetId": "1351620000001-500020",
+          "SegmentDuration": "4.0",
+          "Status": "Complete",
+          "StatusDetail": null,
+          "Duration": 67,
+          "Width": 1280,
+          "Height": 720,
+          "FrameRate": "30",
+          "FileSize": 40090899,
+          "DurationMillis": 66834,
+          "Watermarks": [],
+          "Captions": {
+            "MergePolicy": "Override",
+            "CaptionSources": [
+              {
+                "Key": "media/blacksmith-2/videos/en/4s-3_EXP_DealingwithyourMistakes.vtt",
+                "Language": "en",
+                "TimeOffset": "0",
+                "Label": null
+              }
+            ],
+            "CaptionFormats": [
+              {
+                "Format": "webvtt",
+                "Pattern": "captions-{language}"
+              }
+            ]
+          },
+          "AppliedColorSpaceConversion": null
+        }
+      ],
+      "Playlists": [
+        {
+          "Name": "playlist",
+          "Format": "HLSv3",
+          "OutputKeys": [
+            "hls/480p/4s-3_EXP_DealingwithyourMistakes",
+            "hls/720p/4s-3_EXP_DealingwithyourMistakes",
+            "hls/1080p/4s-3_EXP_DealingwithyourMistakes"
+          ],
+          "Status": "Complete",
+          "StatusDetail": null
+        },
+        {
+          "Name": "playlist-dash",
+          "Format": "MPEG-DASH",
+          "OutputKeys": [
+            "dash/audio/4s-3_EXP_DealingwithyourMistakes",
+            "dash/480p/4s-3_EXP_DealingwithyourMistakes",
+            "dash/720p/4s-3_EXP_DealingwithyourMistakes",
+            "dash/1080p/4s-3_EXP_DealingwithyourMistakes"
+          ],
+          "Status": "Complete",
+          "StatusDetail": null
+        }
+      ],
+      "hash": "7640ea8b37cedc220840b62e100590847225754a28f094371f273ee60e8b9bb2"
+    }
+  ]
+}

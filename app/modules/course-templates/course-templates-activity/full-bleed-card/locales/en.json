@@ -1,0 +1,10 @@
+{
+  "course-templates": {
+    "course-templates-activity": {
+      "full-bleed-card": {
+        "pageHeader": "Full Bleed + Card Template Example",
+        "pageText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu eros cursus, facilisis mi id, finibus libero. Suspendisse mattis egestas lacinia. Sed consequat erat diam, a porta mauris convallis ut. Praesent consectetur posuere lectus ut luctus. Quisque commodo tellus sed ligula tincidunt viverra nec ac quam. Sed feugiat hendrerit lacinia. Integer laoreet erat eu nisi tempor, quis eleifend ligula vehicula."
+      }
+    }
+  }
+}

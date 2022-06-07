@@ -1,0 +1,41 @@
+{
+  "key": "course-templates",
+  "title": "Course Templates",
+  "unlocked": "true",
+  "description": "Course Templates Examples",
+  "index": 1,
+  "group": 1,
+  "id": "course_templates",
+  "module_word": "module_word",
+  "begin_word": "begin_word",
+  "activities": [
+    {
+      "title": "course templates activity",
+      "key": "course-templates-activity",
+      "pages": [
+        {
+          "key": "horizontal-split",
+          "index": 1,
+          "script": false
+        },
+        {
+          "key": "vertical-split",
+          "index": 2,
+          "script": false
+        },
+        {
+          "key": "full-bleed-card",
+          "script": false,
+          "index": 3
+        },
+        {
+          "key": "single-column",
+          "script": false,
+          "index": 4
+        }
+      ],
+      "index": 1
+    }
+  ],
+  "groupId": 1
+}

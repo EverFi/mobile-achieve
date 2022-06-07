@@ -1,0 +1,287 @@
+[
+  {
+    "id": 66,
+    "type": "PolicyResource",
+    "sub_type": "medical-amnesty-good-samaritan-policy",
+    "default": false,
+    "name": "Medical Amnesty Policy",
+    "url": "http://simpsonswiki.com/wiki/Made-up_words",
+    "body": "",
+    "requires_link_click": true,
+    "requires_e_signature": true,
+    "resource_link_copy": "viewPolicy"
+  },
+  {
+    "id": 67,
+    "type": "PolicyResource",
+    "sub_type": "honor-policy",
+    "default": false,
+    "name": "Honor Policy",
+    "url": "http://simpsonswiki.com/wiki/Made-up_words",
+    "body": "",
+    "requires_link_click": true,
+    "requires_e_signature": true,
+    "resource_link_copy": "viewPolicy"
+  },
+  {
+    "id": 68,
+    "type": "PolicyResource",
+    "sub_type": "alcohol-and-other-drug-policy",
+    "default": false,
+    "name": "Alcohol and Other Drug Policy",
+    "url": "http://simpsonswiki.com/wiki/Made-up_words",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities.",
+    "requires_link_click": true,
+    "requires_e_signature": true,
+    "resource_link_copy": "viewPolicy"
+  },
+  {
+    "id": 69,
+    "type": "PolicyResource",
+    "sub_type": "generic-policy",
+    "name": "Campus Diversity",
+    "url": "http://simpsonswiki.com/wiki/Made-up_words",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities.",
+    "requires_e_signature": false,
+    "default": false,
+    "signed_at": null,
+    "signed": false,
+    "signature_confirmed": false
+  },
+  {
+    "id": 70,
+    "type": "Resource",
+    "sub_type": "Alcohol Policy",
+    "default": false,
+    "name": "A blank test test",
+    "url": "http://simpsonswiki.com/wiki/Made-up_words",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities.",
+    "requires_e_signature": false
+  },
+  {
+    "id": 71,
+    "type": "Resource",
+    "sub_type": "generic-policy",
+    "name": "Title With e_sign",
+    "url": "http://simpsonswiki.com/wiki/Made-up_words",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities.",
+    "requires_e_signature": false,
+    "default": false,
+    "signed_at": null,
+    "signed": false
+  },
+  {
+    "id": 72,
+    "type": "Resource",
+    "sub_type": "generic-policy",
+    "name": "Title Without e_sign",
+    "url": "http://simpsonswiki.com/wiki/Made-up_words",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities.",
+    "requires_e_signature": false,
+    "default": false,
+    "signed_at": null,
+    "signed": false
+  },
+  {
+    "id": 24,
+    "type": "Resource",
+    "sub_type": "substance-resource-local",
+    "name": "Substance 1: Made Up Words",
+    "url": "http://simpsonswiki.com/wiki/Made-up_words",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities."
+  },
+  {
+    "id": 25,
+    "type": "Resource",
+    "sub_type": "Substance Resource",
+    "name": "Substance 2: BFC on the Simpsons (no body text)",
+    "url": "http://simpsonswiki.com/wiki/Betty_Ford_Center",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities.",
+    "show_modal": false,
+    "separate_resource_link": false
+  },
+  {
+    "id": 26,
+    "type": "Resource",
+    "sub_type": "Substance Resource",
+    "name": "Substance 3: NEW Substance Resource Test",
+    "url": "http://www.everfi.com/",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities."
+  },
+  {
+    "id": 27,
+    "type": "NationalResource",
+    "sub_type": "national-resources",
+    "name": "Substance Abuse Treatment Referral Locator",
+    "url": "http://findtreatment.samhsa.gov/",
+    "body": "This site helps people find alcohol and drug abuse treatment or mental health treatment facilities and programs around the country. It is sponsored by SAMHSA, The Substance Abuse and Mental Health Services Administration, an agency within the U.S. Department of Health and Human Services that aims to reduce the impact of substance abuse and mental illness on America's communities."
+  },
+  {
+    "id": 28,
+    "type": "NationalResource",
+    "sub_type": "national-resources",
+    "name": "The Center on Addiction and the Family (COAF, formerly known as the Children of Alcoholics Foundation)",
+    "url": "http://www.phoenixhouse.org/family/center-on-addiction-and-the-family",
+    "body": "The Center on Addiction and the Family (COAF, formerly known as the Children of Alcoholics Foundation) is a unit of Phoenix House, the nation’s leading provider of alcohol and drug abuse treatment and prevention services. Its mission is to ensure that individuals, families, and professionals receive information and services that support the healing process – for everyone."
+  },
+  {
+    "id": 29,
+    "type": "NationalResource",
+    "sub_type": "national-resources",
+    "name": "Alcoholics Anonymous (AA)",
+    "url": "http://www.aa.org/",
+    "body": "Alcoholics Anonymous (AA) is an international fellowship whose primary purpose is to help alcoholics achieve sobriety. It is available almost everywhere, and membership is open to anyone who wants to do something about his or her drinking problem."
+  },
+  {
+    "id": 30,
+    "type": "NationalResource",
+    "sub_type": "national-resources",
+    "name": "Al-Anon/Alateen",
+    "url": "http://www.al-anon.alateen.org/",
+    "body": "Al-Anon is an independent fellowship that helps relatives and friends of alcoholics. Al-Anon holds the view that alcoholism is a family illness. Groups share their experience, strength, and hope in order to aid recovery."
+  },
+  {
+    "id": 31,
+    "type": "NationalResource",
+    "sub_type": "national-resources",
+    "name": "National Drug Treatment Referral Routing Service – 1-800-662-HELP (4357)",
+    "url": "http://www.samhsa.gov/find-help/national-helpline",
+    "body": "The Substance Abuse and Mental Health Services Administration's (SAMHSA) toll-free telephone number for alcohol and drug information and local treatment referral assistance. Open 24 hours a day, 7 days a week."
+  },
+  {
+    "id": 32,
+    "type": "NationalResource",
+    "sub_type": "national-resources",
+    "name": "Adult Children of Alcoholics World Service Organization, Inc.",
+    "url": "http://www.adultchildren.org/",
+    "body": "Adult Children of Alcoholics is an anonymous program of women and men who grew up in an alcoholic or otherwise dysfunctional home. The program gathers and disseminates meeting information for members; creates and distributes literature for use in groups, and provides information to the general public."
+  },
+  {
+    "id": 33,
+    "type": "NationalResource",
+    "sub_type": "self-care-resources-global",
+    "name": "21 Day Self-Care Challenge",
+    "url": "https://www.movetoendviolence.org/resources/21-day-self-care-resources-challenge-packet/",
+    "body": "The organization Move to End Violence created this 21-day challenge packet that breaks down self-care-resources practices into manageable daily goals."
+  },
+  {
+    "id": 34,
+    "type": "NationalResource",
+    "sub_type": "self-care-resources",
+    "name": "Self-Care Strategies for Survival",
+    "url": "https://www.compasspoint.org/blog/self-care-resources-strategies-survival-sustaining-oneself-social-justice-movements",
+    "body": "An insightful article on self-care-resources strategies from Lauren Lofton, JD."
+  },
+  {
+    "id": 35,
+    "type": "NationalResource",
+    "sub_type": "self-care-resources",
+    "name": "#SelfCare",
+    "url": "http://truluv.ai/selfcare",
+    "body": "This free game for your phone lets you explore self-care-resources practices."
+  },
+  {
+    "id": 36,
+    "type": "NationalResource",
+    "sub_type": "self-care-resources",
+    "name": "Getting Started with Mindfulness",
+    "url": "https://www.mindful.org/meditation/mindfulness-getting-started/",
+    "body": "The basics of mindfulness and meditation from Mindful.org."
+  },
+  {
+    "id": 37,
+    "type": "NationalResource",
+    "sub_type": "self-care-resources",
+    "name": "Mindfulness Coach",
+    "url": "https://mobile.va.gov/app/mindfulness-coach",
+    "body": "Created by the U.S. Department for Veterans Affairs, this free app is designed for anyone who wants to learn mindfulness and relaxation skills."
+  },
+  {
+    "id": 38,
+    "type": "NationalResource",
+    "sub_type": "self-care-resources",
+    "name": "Emm's Positivity Blog",
+    "url": "https://positivedoodles.tumblr.com/",
+    "body": "Illustrations and daily musings from an artist who lives with chronic illness."
+  },
+  {
+    "id": 39,
+    "type": "NationalResource",
+    "sub_type": "substance-resource-global",
+    "name": "Noisli",
+    "url": "https://www.noisli.com/",
+    "body": "Mix ambient sounds to create an environment that helps you be productive or relax."
+  },
+  {
+    "id": 40,
+    "type": "NationalResource",
+    "sub_type": "self-care-resources-global",
+    "name": "10 Things Worth Trying During Times of Stress, Trauma, or Crisis",
+    "url": "https://www.upworthy.com/10-things-worth-trying-during-times-of-stress-trauma-or-crisis",
+    "body": "This collection of tips from Upworthy includes helpful pointers and cute animal gifs."
+  },
+  {
+    "id": 41,
+    "type": "NationalResource",
+    "sub_type": "substance-resource-global",
+    "name": "The Importance of Self-Care",
+    "url": "https://www.ted.com/playlists/299/the_importance_of_self_care",
+    "body": "This playlist of talks from TED includes a variety of perspectives on self-care-resources."
+  },
+  {
+    "id": 42,
+    "type": "Resource",
+    "sub_type": "self-care-resources-local",
+    "name": "10 Things Worth Trying During Times of Stress, Trauma, or Crisis",
+    "url": "https://www.upworthy.com/10-things-worth-trying-during-times-of-stress-trauma-or-crisis",
+    "body": "This collection of tips from Upworthy includes helpful pointers and cute animal gifs."
+  },
+  {
+    "id": 43,
+    "type": "NationalResource",
+    "sub_type": "More-to-explore",
+    "name": "Substance Abuse Treatment Referral Locator",
+    "url": "http://findtreatment.samhsa.gov",
+    "body": ""
+  },
+  {
+    "id": 44,
+    "type": "NationalResource",
+    "sub_type": "More-to-explore",
+    "name": "The Center on Addiction and the Family (COAF, formerly known as the Children of Alcoholics Foundation)",
+    "url": "http://www.phoenixhouse.org/family/center-on-addiction-and-the-family",
+    "body": ""
+  },
+  {
+    "id": 45,
+    "type": "NationalResource",
+    "sub_type": "More-to-explore",
+    "name": "The Center on Addiction and the Family (COAF, formerly known as the Children of Alcoholics Foundation)",
+    "url": "http://www.aa.org",
+    "body": ""
+  },
+  {
+    "id": 46,
+    "type": "NationalResource",
+    "sub_type": "More-to-explore",
+    "name": "The Center on Addiction and the Family (COAF, formerly known as the Children of Alcoholics Foundation)",
+    "url": "http://www.al-anon.alateen.org",
+    "body": ""
+  },
+  {
+    "id": 47,
+    "type": "NationalResource",
+    "sub_type": "more-to-explore-global",
+    "name": "National Drug Treatment Referral Routing Service – 1-800-662-HELP (4357)",
+    "url": "http://www.samhsa.gov/find-help/national-helpline",
+    "body": ""
+  },
+  {
+    "id": 48,
+    "type": "NationalResource",
+    "sub_type": "more-to-explore-global",
+    "name": "Adult Children of Alcoholics World Service Organization, Inc.",
+    "url": "http://www.adultchildren.org",
+    "body": ""
+  }
+]
