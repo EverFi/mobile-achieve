@@ -14,24 +14,30 @@
       "key": "course-templates-activity",
       "pages": [
         {
-          "key": "horizontal-split",
+          "key": "intro",
+          "title": "intro",
           "index": 1,
           "script": false
         },
         {
-          "key": "vertical-split",
+          "key": "horizontal-split",
           "index": 2,
+          "script": false
+        },
+        {
+          "key": "vertical-split",
+          "index": 3,
           "script": false
         },
         {
           "key": "full-bleed-card",
           "script": false,
-          "index": 3
+          "index": 4
         },
         {
           "key": "single-column",
           "script": false,
-          "index": 4
+          "index": 5
         }
       ],
       "index": 1

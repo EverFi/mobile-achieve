@@ -1,0 +1,60 @@
+blocks:
+  - type: layout
+    path: grid/grid-dynamic
+    class: {{class}}
+    disableGap: row
+    regions:
+      - columns: 4
+        blocks:
+          - type: container
+            class: bg-color-neutral-100 elevation-2 border-radius-md
+            blocks:
+              {{#if image}}
+              - type: image
+                images:
+                  - path: {{image}}
+                    {{#if imageWidth}}
+                    width: {{imageWidth}}
+                    {{/if}}
+                    {{#if imageHeight}}
+                    height: {{imageHeight}}
+                    {{#if imageDescription}}
+                    description: {{imageDescription}}{{else}}""{{/if}}                    
+                    {{/if}}
+              {{/if}}
+          {{#if pageHeader}}
+          - type: header
+            class: h1 m-stack-md {{#if align}}{{align}}{{else}}text-center{{/if}}
+            h1:
+              - {{pageHeader}}
+          {{/if}}
+          - type: header
+            class: h4 m-stack-md {{#if align}}{{align}}{{else}}text-center{{/if}}
+            h2:
+              - {{moduleTime}}
+          - type: container
+            class: p-inset-lg
+            blocks:
+              {{#if pageDescription}}
+                  - type: text
+                    class: subtitle m-none {{#if align}}{{align}}{{else}}text-left{{/if}}
+                    items:
+                      - description: {{pageDescription}}
+                        description_class: m-stack-sm
+                      {{#if pageDescription2}}
+                      - description: {{pageDescription2}}
+                        description_class: m-stack-sm
+                      {{/if}}
+                      {{#if pageDescription3}}
+                      - description: {{pageDescription3}}
+                        description_class: m-stack-sm
+                      {{/if}}
+                  {{/if}}
+          - type: component
+            path: partial/molecules/navigate
+            class: m-none
+            parameters:
+              direction: forward
+              button_class: btn-block
+              text: explore
+              sr_text: explore     
