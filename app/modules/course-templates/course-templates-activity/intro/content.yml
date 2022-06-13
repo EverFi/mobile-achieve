@@ -2,7 +2,7 @@ blocks:
   - type: component
     path: ma-intro
     parameters:
-      image: 
+      image: images/ma-keys.png
       pageHeader: headerExample
       moduleTime: moduleAndTime
       pageDescription: description1

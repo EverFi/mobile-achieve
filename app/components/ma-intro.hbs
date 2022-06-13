@@ -7,7 +7,7 @@ blocks:
       - columns: 4
         blocks:
           - type: container
-            class: bg-color-neutral-100 elevation-2 border-radius-md
+            class: bg-color-neutral-100 m-stack-top-xl
             blocks:
               {{#if image}}
               - type: image
@@ -24,37 +24,40 @@ blocks:
               {{/if}}
           {{#if pageHeader}}
           - type: header
-            class: h1 m-stack-md {{#if align}}{{align}}{{else}}text-center{{/if}}
+            class: h1 m-stack-top-md {{#if align}}{{align}}{{else}}text-center{{/if}}
             h1:
               - {{pageHeader}}
           {{/if}}
           - type: header
-            class: h4 m-stack-md {{#if align}}{{align}}{{else}}text-center{{/if}}
+            class: h4 m-stack-top-sm {{#if align}}{{align}}{{else}}text-center{{/if}}
             h2:
               - {{moduleTime}}
           - type: container
             class: p-inset-lg
             blocks:
               {{#if pageDescription}}
-                  - type: text
-                    class: subtitle m-none {{#if align}}{{align}}{{else}}text-left{{/if}}
-                    items:
-                      - description: {{pageDescription}}
-                        description_class: m-stack-sm
-                      {{#if pageDescription2}}
-                      - description: {{pageDescription2}}
-                        description_class: m-stack-sm
-                      {{/if}}
-                      {{#if pageDescription3}}
-                      - description: {{pageDescription3}}
-                        description_class: m-stack-sm
-                      {{/if}}
+              - type: text
+                class: subtitle m-none {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{pageDescription}}
+                    description_class: m-stack-sm
+                  {{#if pageDescription2}}
+                  - description: {{pageDescription2}}
+                    description_class: m-stack-sm
                   {{/if}}
-          - type: component
-            path: partial/molecules/navigate
-            class: m-none
-            parameters:
-              direction: forward
-              button_class: btn-block
-              text: explore
-              sr_text: explore     
+                  {{#if pageDescription3}}
+                  - description: {{pageDescription3}}
+                    description_class: m-stack-sm
+                  {{/if}}
+                {{/if}}
+          - type: container
+            class: p-inset-lg m-stack-top-xl 
+            blocks:      
+              - type: component
+                path: partial/molecules/navigate
+                class: m-none
+                parameters:
+                  direction: forward
+                  button_class: btn-block bg-color-neutral-900 border-radius-rounded m-stack-md
+                  text: explore
+                  sr_text: explore
