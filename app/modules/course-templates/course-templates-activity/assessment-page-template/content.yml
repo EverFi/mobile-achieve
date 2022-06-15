@@ -1,0 +1,16 @@
+blocks:
+  - type: component
+    path: ma-intro
+    parameters:
+      pageHeader: assessmentTemplate.page1
+      form-ID: assessmentExample
+      formKey: assessmentKeyExample
+      questions:
+        - value: 0
+          optionID: option1
+          optionLabel: option1
+        - value: 1
+          optionID: option2
+          optionLabel: option2  
+
+

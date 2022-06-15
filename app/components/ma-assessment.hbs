@@ -1,0 +1,75 @@
+blocks:
+  - type: layout
+    path: grid/grid-dynamic
+    class: {{class}}
+    disableGap: row
+    regions:
+      - columns: 2
+        class: hidden-phone span-1-tablet
+      - columns: 4
+        class: span-6-tablet span-8-desktop
+        blocks:
+          - type: container
+            blocks:
+              {{#if pageHeader}}
+              - type: header
+                class: h1 m-stack-top-md {{#if align}}{{align}}{{else}}text-center{{/if}}
+                h1:
+                  - {{pageHeader}}
+              {{/if}}
+          {{#if additional-text.enable}}
+          - type: container
+            blocks:
+              {{#if additional-text.blocks}} 
+              {{{yamlize additional-text.blocks 10}}}
+              {{/if}}
+          {{/if}}
+          {{#if textDescription}}
+          - type: container
+            class: m-stack-top-lg
+            blocks:
+              - type: text
+                class: p1 font-color-neutral-900 m-stack-md {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{textDescription}}
+          {{/if}}
+          - type: container
+            blocks:
+              - type: form
+                required: false
+                {{#if form-ID}}
+                id: {{form-ID}}
+                {{/if}}
+                data:
+                  key: {{formKey}}
+                  service: local
+                  submit:
+                    class: btn-primary
+                    text: submit
+                fields:
+                  - type: field
+                    field_type: radio
+                    name: {{assessmentQuestions}}
+                    required: false
+                    legend: {{questionLegend}}
+                    helptext:
+                      position: top
+                      text: {{formLabel}}
+                    options:
+                    {{#each questions}}
+                      - value: {{value}} {{! numeric value}}
+                        id: {{optionID}}
+                        label: {{optionLabel}}
+                    {{/each}}
+                    display_validation_errors: true
+          - type: container
+            class: p-inset-lg m-stack-top-xl 
+            blocks:      
+              - type: component
+                path: partial/molecules/navigate
+                class: m-none
+                parameters:
+                  direction: forward
+                  button_class: btn-block bg-color-neutral-900 border-radius-rounded m-stack-md
+                  text: explore
+                  sr_text: explore

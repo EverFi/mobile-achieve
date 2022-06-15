@@ -4,7 +4,10 @@ blocks:
     class: {{class}}
     disableGap: row
     regions:
+      - columns: 2
+        class: hidden-phone span-1-tablet
       - columns: 4
+        class: span-6-tablet span-8-desktop
         blocks:
           - type: container
             class: bg-color-neutral-100 m-stack-top-xl
@@ -51,7 +54,7 @@ blocks:
                   {{/if}}
                 {{/if}}
           - type: container
-            class: p-inset-lg m-stack-top-xl 
+            class: p-inset-stretch-xl m-stack-top-lg
             blocks:      
               - type: component
                 path: partial/molecules/navigate
