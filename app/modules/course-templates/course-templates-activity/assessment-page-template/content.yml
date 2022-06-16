@@ -3,8 +3,41 @@ blocks:
     path: ma-intro
     parameters:
       pageHeader: assessmentTemplate.page1
-      form-ID: assessmentExample
+      additional-text:
+        enable: true
+        blocks:
+          - type: text
+            items:
+              - description: text
+          - type: form
+            required: true
+            id: form-1
+            data:
+              key: formStorage
+              prepopulate: true
+              service: local
+              submit:
+                class: btn-primary
+                text: submit
+            fields:
+              - type: field
+                field_type: radio
+                name: question1
+                required: true
+                legend: question1label
+                helptext:
+                  position: top
+                  text: selectaresponse
+                options:
+                  - value: 0
+                    id: option1
+                    label: option1
+                  - value: 1
+                    id: option2
+                    label: option2
+                display_validation_errors: true
       formKey: assessmentKeyExample
+      assessmentQuestion: assessmentQuestionExample
       questions:
         - value: 0
           optionID: option1

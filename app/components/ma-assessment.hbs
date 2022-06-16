@@ -1,7 +1,7 @@
 blocks:
   - type: layout
     path: grid/grid-dynamic
-    class: {{class}}
+    class: p-stack-top-xl {{class}}
     disableGap: row
     regions:
       - columns: 2
@@ -10,10 +10,11 @@ blocks:
         class: span-6-tablet span-8-desktop
         blocks:
           - type: container
+            class: p-inset-squish-lg
             blocks:
               {{#if pageHeader}}
               - type: header
-                class: h1 m-stack-top-md {{#if align}}{{align}}{{else}}text-center{{/if}}
+                class: h1 m-stack-md{{#if align}}{{align}}{{else}}text-center{{/if}}
                 h1:
                   - {{pageHeader}}
               {{/if}}
@@ -33,35 +34,32 @@ blocks:
                 items:
                   - description: {{textDescription}}
           {{/if}}
-          - type: container
-            blocks:
-              - type: form
-                required: false
-                {{#if form-ID}}
-                id: {{form-ID}}
-                {{/if}}
-                data:
-                  key: {{formKey}}
-                  service: local
-                  submit:
-                    class: btn-primary
-                    text: submit
-                fields:
-                  - type: field
-                    field_type: radio
-                    name: {{assessmentQuestions}}
-                    required: false
-                    legend: {{questionLegend}}
-                    helptext:
-                      position: top
-                      text: {{formLabel}}
-                    options:
-                    {{#each questions}}
-                      - value: {{value}} {{! numeric value}}
-                        id: {{optionID}}
-                        label: {{optionLabel}}
-                    {{/each}}
-                    display_validation_errors: true
+          - type: form
+            form_type: generic
+            required: false
+            data:
+              key: {{formKey}}
+              service: local
+              submit:
+                class: btn-primary
+                text: submit
+            fields:
+              - type: field
+                field_type: radio
+                {{#if assessmentQuestion}}
+                name: {{assessmentQuestion}} {{/if}}
+                {{#if questionLegend}}
+                legend: {{questionLegend}} {{/if}}
+                helptext:
+                  position: top
+                  text: {{formLabel}}
+                options:
+                {{#each questions}}
+                  - value: {{value}} {{! numeric value}}
+                    id: {{optionID}}
+                    label: {{optionLabel}}
+                {{/each}}
+                display_validation_errors: true
           - type: container
             class: p-inset-lg m-stack-top-xl 
             blocks:      
