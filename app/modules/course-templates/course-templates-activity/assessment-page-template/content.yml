@@ -2,8 +2,8 @@ blocks:
   - type: component
     path: ma-assessment
     parameters:
-      pageHeader: assessmentTemplate.page1
-      subtitleText: subtilte
+      pageHeader: assessmentTemplate
+      subtitleText: subtitle
       formKey: assessmentKeyExample
       assessmentQuestion: assessmentQuestionExample
       formLabel: selectAResponse
