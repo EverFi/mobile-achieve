@@ -1,43 +1,12 @@
 blocks:
   - type: component
-    path: ma-intro
+    path: ma-assessment
     parameters:
       pageHeader: assessmentTemplate.page1
-      additional-text:
-        enable: true
-        blocks:
-          - type: text
-            items:
-              - description: text
-          - type: form
-            required: true
-            id: form-1
-            data:
-              key: formStorage
-              prepopulate: true
-              service: local
-              submit:
-                class: btn-primary
-                text: submit
-            fields:
-              - type: field
-                field_type: radio
-                name: question1
-                required: true
-                legend: question1label
-                helptext:
-                  position: top
-                  text: selectaresponse
-                options:
-                  - value: 0
-                    id: option1
-                    label: option1
-                  - value: 1
-                    id: option2
-                    label: option2
-                display_validation_errors: true
+      subtitleText: subtilte
       formKey: assessmentKeyExample
       assessmentQuestion: assessmentQuestionExample
+      formLabel: selectAResponse
       questions:
         - value: 0
           optionID: option1
@@ -45,5 +14,17 @@ blocks:
         - value: 1
           optionID: option2
           optionLabel: option2  
-
+        - value: 2
+          optionID: option3
+          optionLabel: option3
+        - value: 3
+          optionID: option4
+          optionLabel: option4
+        - value: 4
+          optionID: option5
+          optionLabel: option5
+        - value: 5
+          optionID: option6
+          optionLabel: option6
+      correctOption: option6
 

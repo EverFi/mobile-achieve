@@ -1,7 +1,7 @@
 blocks:
   - type: layout
     path: grid/grid-dynamic
-    class: p-stack-top-xl {{class}}
+    class: p-stack-top-xl
     disableGap: row
     regions:
       - columns: 2
@@ -18,6 +18,12 @@ blocks:
                 h1:
                   - {{pageHeader}}
               {{/if}}
+              {{#if subtitleText}}
+              - type: text
+                class: subtitle {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{subtitleText}}
+              {{/if}}    
           {{#if additional-text.enable}}
           - type: container
             blocks:
@@ -25,41 +31,108 @@ blocks:
               {{{yamlize additional-text.blocks 10}}}
               {{/if}}
           {{/if}}
-          {{#if textDescription}}
+          {{#if instructionalText}}
           - type: container
-            class: m-stack-top-lg
+            class: p-inset-squish-lg
             blocks:
               - type: text
                 class: p1 font-color-neutral-900 m-stack-md {{#if align}}{{align}}{{else}}text-left{{/if}}
                 items:
-                  - description: {{textDescription}}
+                  - description: {{instructionalText}}
           {{/if}}
-          - type: form
-            form_type: generic
-            required: false
-            data:
-              key: {{formKey}}
-              service: local
-              submit:
-                class: btn-primary
-                text: submit
-            fields:
-              - type: field
-                field_type: radio
-                {{#if assessmentQuestion}}
-                name: {{assessmentQuestion}} {{/if}}
-                {{#if questionLegend}}
-                legend: {{questionLegend}} {{/if}}
-                helptext:
-                  position: top
-                  text: {{formLabel}}
-                options:
-                {{#each questions}}
-                  - value: {{value}} {{! numeric value}}
-                    id: {{optionID}}
-                    label: {{optionLabel}}
-                {{/each}}
-                display_validation_errors: true
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              - type: form
+                hide_submit_button: false
+                form_type: generic
+                required: true
+                data:
+                  key: {{formKey}}
+                  service: local
+                  submit:
+                    class: btn-primary toggle-modal
+                    text: submit
+                feedback:
+                  region: custom-feedback
+                  blocks:
+                    - class: test-class
+                      blocks:
+                        - type: switch
+                          source:
+                            service: local
+                            key: formExample.player
+                          values:
+                            {{#each optionID}}
+                            - value: {{optionID}}
+                              blocks:
+
+                            {{/each}}    
+                fields:
+                  - type: field
+                    field_type: radio
+                    {{#if assessmentQuestion}}
+                    name: {{assessmentQuestion}} {{/if}}
+                    {{#if questionLegend}}
+                    legend: {{questionLegend}} {{/if}}
+                    helptext:
+                      position: top
+                      text: {{formLabel}}
+                    options:
+                    {{#each questions}}
+                      - value: {{value}}
+                        id: {{optionID}}
+                        label: {{optionLabel}}
+                    {{/each}}
+                    display_validation_errors: true
+              - type: text
+                id: correctOption
+                class: hidden
+                items:
+                  - description: {{correctOption}}
+          {{#if correctOption}}
+          - type: modal
+            id: custom-feedback
+            drawer: true
+            drawer_direction: bottom
+            auto_open: false
+            header: Drawer Header Example
+            header_class: h3
+            no_footer: true
+            blocks:
+              - type: component
+                path: partial/molecules/card
+                class: bg-color-interactive-100
+                parameters:
+                  - type: header
+                    h2:
+                      - feedbackHeader
+                  - type: text
+                    class: p1
+                    items:
+                      - description: feedbackText
+          {{else}}
+          - type: modal
+            id: custom-feedback
+            drawer: true
+            drawer_direction: bottom
+            auto_open: false
+            header: Drawer Header Example
+            header_class: h3
+            no_footer: true
+            blocks:
+              - type: component
+                path: partial/molecules/card
+                class: bg-color-neutral-300
+                parameters:
+                  - type: header
+                    h2:
+                      - feedbackHeader
+                  - type: text
+                    class: p1
+                    items:
+                      - description: feedbackText
+          {{/if}}
           - type: container
             class: p-inset-lg m-stack-top-xl 
             blocks:      
@@ -68,6 +141,7 @@ blocks:
                 class: m-none
                 parameters:
                   direction: forward
-                  button_class: btn-block bg-color-neutral-900 border-radius-rounded m-stack-md
-                  text: explore
-                  sr_text: explore
+                  button_class: btn-block bg-color-neutral-900 border-radius-rounded m-stack-md custom-feedback
+                  text: continue
+                  sr_text: continue
+                  override_enabled: false
