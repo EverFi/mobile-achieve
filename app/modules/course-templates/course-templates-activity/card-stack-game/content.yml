@@ -1,3 +1,47 @@
 blocks:
-  - type: container
-    blocks: []
+  - type: component
+    path: ma-card-stack-game
+    parameters:
+      pageHeader: cardGameTemplate
+      subtitleText: subtitle
+      card-stack-ID: card-stack-example
+      cards_to_show: 4
+      pass_score: 750
+      points_per_score: 250
+      endStateHeadingPerfect: perfectHeaderText
+      endStateBodyPerfect: perfectBodyText
+      endStateHeadingPass: almostHeaderText
+      endStateBodyPass: almostBodyText
+      endStateHeadingFail: failHeaderText
+      endStateBodyFail: failBodyText
+      progressLottieIntroLength: 1
+      progressLottieMidpoint: 2
+      progressLottieLength: 4
+      score: scoreText
+      streak: streakText
+      showFacts: showFactsText
+      failureTextHeading: failureHeadingText
+      continueButtonText: continueButtonText
+      factsListHeading: factsListHeadingText
+      fictionListHeading: fictionListHeadingText
+      replayButton: replayButtonText
+      playText: playText
+      howToPlay: howToPlayText
+      howToPlayBody: howToPlayBodyText
+      falseButtonText: falseButtonText
+      trueButtonText: trueButtonText
+      notQuiteHeading: notQuiteHeadingText
+      correctHeading: correctHeadingText
+      statements:
+        - statementText: statementText1
+          factStatement: true
+          statementFeedback: statementFeedbackText1
+        - statementText: statementText2
+          factStatement: false
+          statementFeedback: statementFeedbackText2
+        - statementText: statementText3
+          factStatement: true
+          statementFeedback: statementFeedbackText3
+        - statementText: statementText4
+          factStatement: false
+          statementFeedback: statementFeedbackText4

@@ -26,29 +26,35 @@
           "script": false
         },
         {
-          "key": "horizontal-split",
+          "key": "card-stack-game",
+          "title": "card-stack-game",
           "index": 3,
           "script": false
         },
         {
-          "key": "vertical-split",
+          "key": "horizontal-split",
           "index": 4,
+          "script": false
+        },
+        {
+          "key": "vertical-split",
+          "index": 5,
           "script": false
         },
         {
           "key": "full-bleed-card",
           "script": false,
-          "index": 5
+          "index": 6
         },
         {
           "key": "single-column",
           "script": false,
-          "index": 6
+          "index": 7
         },
         {
-          "key": "card-stack-game",
-          "title": "card-stack-game",
-          "index": 7,
+          "key": "carousel-page-template",
+          "title": "carousel-page-template",
+          "index": 8,
           "script": false
         }
       ],

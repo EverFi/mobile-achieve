@@ -40,61 +40,64 @@ blocks:
                 items:
                   - description: {{instructionalText}}
           {{/if}}
-          - type: component
-            path: partial/organisms/card-stack-game
-            parameters:
-              id: {{card-stack-ID}}
-              card_class: elevation-2 border-radius-md bg-color-neutral-100
-              required: false
-              cards_to_show: {{cards_to_show}} {{! amount of cards to display}}
-              pass_score: {{pass_score}} {{! example 6}}
-              points_per_score: {{points_per_score}} {{! example 100}}
-              success_lottie: images/lottie/fireworks-success.json
-              failure_lottie: images/lottie/fireworks-fail.json
-              end_state_lottie_perfect: images/lottie/end-state-perfect.json
-              end_state_heading_perfect: {{endStateHeadingPerfect}}
-              end_state_body_perfect: {{endStateBodyPerfect}}
-              end_state_lottie_pass: images/lottie/end-state-passing.json
-              end_state_heading_pass: {{endStateHeadingPass}}
-              end_state_body_pass: {{endStateBodyPass}}
-              end_state_lottie_fail: images/lottie/end-state-fail.json
-              end_state_heading_fail: {{endStateHeadingFail}}
-              end_state_body_fail: {{endStateBodyFail}}
-              show_numeric_streak: true
-              progress_lottie: images/lottie/splat-star.json
-              progress_lottie_intro_length: {{progressLottieIntroLength}} {{! numberic value}}
-              progress_lottie_midpoint: {{progressLottieMidpoint}} {{! numberic value}}
-              progress_lottie_length: {{progressLottieLength}} {{! numberic value}}
-              score: {{score}}
-              streak: {{streak}}
-              show_facts: {{showFacts}}
-              failure_text_heading: {{failureTextHeading}}
-              continue_button_text: {{continueButtonText}}
-              facts: {{factsListHeading}}
-              fiction: {{fictionListHeading}}
-              replay:
-                button_text: {{replayButton}}
-              play: {{playText}}
-              how_to_play:
-                heading: {{howToPlay}}
-                body: {{howToPlayBody}}
-                body_class: p1 text-center
-                blocks:
-                  - type: icon
-                    icon: fal fa-chart-pie
-                    class: font-color-interactive-500 text-center m-stack-top-lg p-stack-lg
-                    size: fa-7x
-              false_button_text: {{falseButtonText}}
-              true_button_text: {{trueButtonText}}
-              heading_class: h3
-              incorrect_heading: {{notQuiteHeading}}
-              correct_heading: {{correctHeading}}
-              cards:
-                {{#each statements}}
-                - statement: {{statementText}}
-                  fact: {{factStatement}} {{! true or false}}
-                  feedback: {{statementFeedback}}
-                {{/each}}
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              - type: component
+                path: partial/organisms/card-stack-game
+                parameters:
+                  id: {{card-stack-ID}}
+                  card_class: elevation-2 border-radius-md bg-color-neutral-100
+                  required: false
+                  cards_to_show: {{cards_to_show}} {{! amount of cards to display}}
+                  pass_score: {{pass_score}} {{! example 6}}
+                  points_per_score: {{points_per_score}} {{! example 100}}
+                  success_lottie: images/lottie/fireworks-success.json
+                  failure_lottie: images/lottie/fireworks-fail.json
+                  end_state_lottie_perfect: images/lottie/end-state-perfect.json
+                  end_state_heading_perfect: {{endStateHeadingPerfect}}
+                  end_state_body_perfect: {{endStateBodyPerfect}}
+                  end_state_lottie_pass: images/lottie/end-state-passing.json
+                  end_state_heading_pass: {{endStateHeadingPass}}
+                  end_state_body_pass: {{endStateBodyPass}}
+                  end_state_lottie_fail: images/lottie/end-state-fail.json
+                  end_state_heading_fail: {{endStateHeadingFail}}
+                  end_state_body_fail: {{endStateBodyFail}}
+                  show_numeric_streak: true
+                  progress_lottie: images/lottie/splat-star.json
+                  progress_lottie_intro_length: {{progressLottieIntroLength}} {{! numberic value}}
+                  progress_lottie_midpoint: {{progressLottieMidpoint}} {{! numberic value}}
+                  progress_lottie_length: {{progressLottieLength}} {{! numberic value}}
+                  score: {{score}}
+                  streak: {{streak}}
+                  show_facts: {{showFacts}}
+                  failure_text_heading: {{failureTextHeading}}
+                  continue_button_text: {{continueButtonText}}
+                  facts: {{factsListHeading}}
+                  fiction: {{fictionListHeading}}
+                  replay:
+                    button_text: {{replayButton}}
+                  play: {{playText}}
+                  how_to_play:
+                    heading: {{howToPlay}}
+                    body: {{howToPlayBody}}
+                    body_class: p1 text-center
+                    blocks:
+                      - type: icon
+                        icon: fal fa-chart-pie
+                        class: font-color-interactive-500 text-center m-stack-top-lg p-stack-lg
+                        size: fa-7x
+                  false_button_text: {{falseButtonText}}
+                  true_button_text: {{trueButtonText}}
+                  heading_class: h3
+                  incorrect_heading: {{notQuiteHeading}}
+                  correct_heading: {{correctHeading}}
+                  cards:
+                    {{#each statements}}
+                    - statement: {{statementText}}
+                      fact: {{factStatement}} {{! true or false}}
+                      feedback: {{statementFeedback}}
+                    {{/each}}
           - type: container
             class: p-inset-lg m-stack-top-lg 
             blocks:      

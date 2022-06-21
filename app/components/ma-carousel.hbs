@@ -1,0 +1,142 @@
+blocks:
+  - type: layout
+    path: grid/grid-dynamic
+    class: p-stack-top-xl
+    disableGap: row
+    regions:
+      - columns: 2
+        class: hidden-phone span-1-tablet
+      - columns: 4
+        class: span-6-tablet span-8-desktop
+        blocks:
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              {{#if pageHeader}}
+              - type: header
+                class: h1 m-stack-md{{#if align}}{{align}}{{else}}text-center{{/if}}
+                h1:
+                  - {{pageHeader}}
+              {{/if}}
+              {{#if subtitleText}}
+              - type: text
+                class: subtitle {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{subtitleText}}
+              {{/if}}    
+          {{#if additional-text.enable}}
+          - type: container
+            blocks:
+              {{#if additional-text.blocks}} 
+              {{{yamlize additional-text.blocks 10}}}
+              {{/if}}
+          {{/if}}
+          {{#if instructionalText}}
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              - type: text
+                class: p1 font-color-neutral-900 m-stack-md {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{instructionalText}}
+          {{/if}}
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              - type: carousel
+                configs:
+                  arrows: true
+                  adaptiveHeight: true
+                  slidesPadding: false
+                  centerMode: true
+                  slidesToShow: 1
+                  centerPadding: 180px
+                  responsive:
+                    - breakpoint: 768
+                      settings:
+                        centerMode: false
+                slides:
+            {{#each carouselItem}}
+                  - blocks:
+                    - type: container
+                      class: bg-color-neutral-100 border-radius-md elevation-2 m-stack-md
+                      blocks:
+                        {{#if img-path}}
+                        - type: image
+                          images:
+                            - path: {{img-path}}
+                              width: {{#if img-width}}{{img-width}}{{/if}}
+                              {{#if img-desc}}
+                              description: {{img-desc}}
+                              {{/if}}
+                        {{/if}}
+                        {{#if svg-path}}
+                        - type: container
+                          flex: true
+                          align: center
+                          class: m-stack-top-lg
+                          blocks:
+                            - type: container
+                              max_width: 300px
+                              blocks:
+                                - type: image
+                                  class: text-center
+                                  images:
+                                    - path: {{svg-path}}
+                        {{/if}}
+                        {{#if icon}}
+                        - type: container
+                          class: p-inset-md bg-color-interactive-500
+                          blocks:
+                            - type: icon
+                              icon: {{icon}}
+                              class: font-color-neutral-100 text-center m-stack-top-xxl p-stack-xxl
+                              size: fa-7x
+                        {{/if}}
+                        - type: container
+                          class: p-inset-squish-lg
+                          min_height: {{#if ../minHeight}}{{../minHeight}}{{else}}120px{{/if}}
+                          blocks:
+                            {{#if carousel-label.enable}}
+                            - type: label
+                              description: {{carousel-label.labelText}}
+                              class: p2 text-center m-stack-sm
+                              theme_class: {{#if carousel-label.labelTheme}}{{carousel-label.labelTheme}}{{else}}success{{/if}}
+                            {{/if}}
+                            - type: container
+                              class: p-inset-squish-md
+                              blocks:
+                                {{#if carousel-header}}
+                                - type: header
+                                  class: h4 m-stack-sm
+                                  h2:
+                                    - {{carousel-header}}
+                                {{/if}}
+                                {{#if carousel-subheader}}
+                                - type: text
+                                  class: subtitle {{#if align}}{{align}}{{else}}text-left{{/if}}
+                                  items:
+                                    - description: {{carousel-subheader}}
+                                {{/if}}                            
+                                {{#if blocks}}
+                                {{{yamlize blocks 24}}}
+                                {{else}}
+                                {{#if carousel-text}}
+                                - type: text
+                                  class: p1
+                                  items:
+                                    - description: {{carousel-text}}{{/if}}
+                                {{/if}}
+            {{/each}}
+          - type: container
+            class: p-inset-lg m-stack-top-lg 
+            blocks:      
+              - type: component
+                path: partial/molecules/navigate
+                class: m-none
+                parameters:
+                  direction: forward
+                  button_class: btn-block bg-color-neutral-900 border-radius-rounded m-stack-md custom-feedback
+                  text: continue
+                  sr_text: continue
+                  override_enabled: false
