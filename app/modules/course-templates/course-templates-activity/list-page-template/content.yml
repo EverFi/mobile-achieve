@@ -3,30 +3,35 @@ blocks:
     path: ma-list
     parameters:
       pageHeader: listTemplate
-      orderedList-item:
-        - orderedList-header: listHeader1
+      ordered-list:
+        - list-header: listHeader1
           list-text: listText1
-        - orderedList-header: listHeader2
+        - list-header: listHeader2
           list-text: listText2
-        - orderedList-header: listHeader3
+        - list-header: listHeader3
           list-text: listText3
-        - orderedList-header: listHeader4
+        - list-header: listHeader4
           list-text: listText4
-        - orderedList-header: listHeader5
+        - list-header: listHeader5
           blocks:
-            - type: text
-              items:
-                - description: afterText1
-            - type: list
-              class: m-none
-              items:
-                - description: unorderedList1
-                - description: unorderedList2
-                - description: unorderedList3
-                - description: unorderedList4
-                - description: unorderedList5
-            - type: text
-              items:
-                - description: afterText2  
+            - type: container
+              class: m-inline-left-md
+              blocks:
+                - type: text
+                  class: p1
+                  items:
+                    - description: afterText1
+                - type: list
+                  class: m-none
+                  items:
+                    - description: unorderedList1
+                    - description: unorderedList2
+                    - description: unorderedList3
+                    - description: unorderedList4
+                    - description: unorderedList5
+                - type: text
+                  class: p1
+                  items:
+                    - description: afterText2  
 
 

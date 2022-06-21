@@ -4,27 +4,26 @@ blocks:
     parameters:
       pageHeader: assessmentTemplate
       subtitleText: subtitle
-      formKey: assessmentKeyExample
-      assessmentQuestion: assessmentQuestionExample
-      formLabel: selectAResponse
-      questions:
-        - value: 0
-          optionID: option1
-          optionLabel: option1
-        - value: 1
-          optionID: option2
-          optionLabel: option2  
-        - value: 2
-          optionID: option3
-          optionLabel: option3
-        - value: 3
-          optionID: option4
-          optionLabel: option4
-        - value: 4
-          optionID: option5
-          optionLabel: option5
-        - value: 5
-          optionID: option6
-          optionLabel: option6
-      correctOption: option6
-
+      instructionalText: instructions
+      questionTemplate: all_at_once
+      questionSet:
+        - questionID: 1
+          questionText: question1
+          correctAnswer: 1a
+          answerOption:
+            - optionID: 1a
+              option: answera
+            - optionID: 1b
+              option: answerb
+            - optionID: 1c
+              option: answerc
+            - optionID: 1d
+              option: answerd
+            - optionID: 1e
+              option: answere
+            - optionID: 1f
+              option: answerf
+          correctHeader: correct
+          correctText: correct1Response
+          incorrectHeader: incorrect
+          incorrectText: incorrect1Response

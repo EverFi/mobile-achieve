@@ -36,103 +36,95 @@ blocks:
             class: p-inset-squish-lg
             blocks:
               - type: text
-                class: p1 font-color-neutral-900 m-stack-md font-color-neutral-900{{#if align}}{{align}}{{else}}text-left{{/if}}
+                class: p1 font-color-neutral-900 {{#if align}}{{align}}{{else}}text-left{{/if}}
                 items:
                   - description: {{instructionalText}}
           {{/if}}
           - type: container
             class: p-inset-squish-lg
             blocks:
-              - type: form
-                hide_submit_button: false
-                form_type: generic
-                required: true
-                data:
-                  key: {{formKey}}
-                  service: local
-                  submit:
-                    class: btn-primary toggle-modal
-                    text: submit
-                feedback:
-                  region: custom-feedback
-                  blocks:
-                    - class: test-class
-                      blocks:
-                        - type: switch
-                          source:
-                            service: local
-                            key: formExample.player
-                          values:
-                            {{#each optionID}}
-                            - value: {{optionID}}
-                              blocks:
-
-                            {{/each}}    
-                fields:
-                  - type: field
-                    field_type: radio
-                    {{#if assessmentQuestion}}
-                    name: {{assessmentQuestion}} {{/if}}
-                    {{#if questionLegend}}
-                    legend: {{questionLegend}} {{/if}}
-                    helptext:
-                      position: top
-                      text: {{formLabel}}
-                    options:
-                    {{#each questions}}
-                      - value: {{value}}
-                        id: {{optionID}}
-                        label: {{optionLabel}}
+              - type: assessment
+                template: {{questionTemplate}}
+                question_separator: seperatorLabel
+                question_caption: questionLabel
+                fade_speed: 1000
+                question_template: multiple_choice
+                allow_answer_change: true
+                must_pass: false
+                split_questions: {{split_questions}}
+                split_index_start: {{split_index_start}}
+                {{#if assessment_slug}}
+                assessment_slug: {{assessment_slug}}
+                {{/if}}
+                {{#unless assessment_slug}}
+                questions:
+                {{#each questionSet}}
+                  - id: {{questionID}}
+                    text: {{questionText}}
+                    correct_answer: {{#if correctAnswer}}{{correctAnswer}}{{/if}}
+                    answers:
+                    {{#each answerOption}}
+                      - id: {{optionID}}
+                        text: {{option}}
                     {{/each}}
-                    display_validation_errors: true
-              - type: text
-                id: correctOption
-                class: hidden
-                items:
-                  - description: {{correctOption}}
-          {{#if correctOption}}
-          - type: modal
-            id: custom-feedback
-            drawer: true
-            drawer_direction: bottom
-            auto_open: false
-            header: Drawer Header Example
-            header_class: h3
-            no_footer: true
-            blocks:
-              - type: component
-                path: partial/molecules/card
-                class: bg-color-interactive-100
-                parameters:
-                  - type: header
-                    h2:
-                      - feedbackHeader
-                  - type: text
-                    class: p1
-                    items:
-                      - description: feedbackText
-          {{else}}
-          - type: modal
-            id: custom-feedback
-            drawer: true
-            drawer_direction: bottom
-            auto_open: false
-            header: Drawer Header Example
-            header_class: h3
-            no_footer: true
-            blocks:
-              - type: component
-                path: partial/molecules/card
-                class: bg-color-neutral-300
-                parameters:
-                  - type: header
-                    h2:
-                      - feedbackHeader
-                  - type: text
-                    class: p1
-                    items:
-                      - description: feedbackText
-          {{/if}}
+                    feedback:
+                      region: response
+                      correct:
+                        blocks:
+                          - type: container
+                            flex: true
+                            justify: flex-start
+                            align: start
+                            wrap: no-wrap
+                            class: >-
+                              bg-color-success-light p-inset-md
+                            blocks:
+                              {{#unless noIcon}}
+                              - type: icon
+                                icon: fas fa-check-circle
+                                classes: font-color-success-base assessment-feedback__icon
+                              {{/unless}}  
+                              - type: container
+                                aria:
+                                  live: polite
+                                blocks:
+                                  - type: header
+                                    class: p1 bold m-stack-xxs
+                                    h2:
+                                      - {{correctHeader}}    
+                                  - type: text
+                                    class: p3 m-none
+                                    items:
+                                      - description: {{correctText}}
+                      incorrect:
+                        blocks:
+                          - type: container
+                            flex: true
+                            justify: flex-start
+                            align: start
+                            wrap: no-wrap
+                            class: >-
+                              bg-color-error-light p-inset-md
+                            blocks:
+                              {{#unless noIcon}}
+                              - type: icon
+                                icon: fas fa-times-circle
+                                classes: font-color-error-base assessment-feedback__icon
+                              {{/unless}}  
+                              - type: container
+                                aria:
+                                  live: polite
+                                blocks:
+                                  - type: header
+                                    class: p1 bold m-stack-xxs
+                                    h2:
+                                      - {{incorrectHeader}}    
+                                  - type: text
+                                    class: p3 m-none
+                                    items:
+                                      - description: {{incorrectText}}
+                {{/each}}
+                {{/unless}}                      
           - type: container
             class: p-inset-lg m-stack-top-lg 
             blocks:      

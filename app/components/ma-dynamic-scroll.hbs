@@ -41,24 +41,38 @@ blocks:
                   - description: {{instructionalText}}
           {{/if}}
           - type: container
-            class: p-inset-squish-lg m-inline-left-md
+            class: p-inset-squish-lg
             blocks:
-          {{#each ordered-list}}
-              {{#if list-header}}
-              - type: header
-                class: h4
-                h2:
-                  - {{list-header}}
-              {{/if}}
-              {{#if blocks}} 
-              {{{yamlize blocks 10}}}
-              {{else}}
-              - type: text
-                class: p1 m-stack-lg
-                items:
-                  - description: {{#if list-text}}{{list-text}} {{/if}}
-              {{/if}}
-          {{/each}}
+            {{#each dynamic-container}}
+              - type: container
+                class: bg-color-neutral-100 elevation-2
+                id: {{dynamicID}}
+                onscroll:
+                  animation: fade-up
+                  duration: {{fadeDuration}}
+                  delay: {{fadeDelay}}
+                  offset: {{fadeOffset}}
+                  once: true
+                blocks:
+                  - type: container
+                    class: p-inset-stretch-lg {{#if firstContainer}}m-stack-top-md{{else}}m-stack-top-xl{{/if}}
+                    blocks:
+                      {{#if dynamicHeader}}
+                      - type: header
+                        class: h3 m-stack-xs
+                        h2:
+                          - {{dynamicHeader}}
+                      {{/if}}
+                      {{#if additional-blocks.blocks}}
+                      {{{yamlize additional-blocks.blocks 22}}}
+                      {{else}}
+                      {{#if dynamicText}}
+                      - type: text
+                        items:
+                          - description: {{dynamicText}}{{/if}}
+                            description_class: p1 m-none
+                      {{/if}}
+            {{/each}}
           - type: container
             class: p-inset-lg m-stack-top-sm 
             blocks:      

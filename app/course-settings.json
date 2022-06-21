@@ -121,6 +121,14 @@
     {
       "prefix": "fas",
       "name": "fa-map-signs"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-check-circle"
+    },
+    {
+      "prefix": "fas",
+      "name": "fa-times-circle"
     }
   ]
 }
