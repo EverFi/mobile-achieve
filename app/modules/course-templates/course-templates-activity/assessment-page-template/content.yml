@@ -1,0 +1,29 @@
+blocks:
+  - type: component
+    path: ma-assessment
+    parameters:
+      pageHeader: assessmentTemplate
+      subtitleText: subtitle
+      instructionalText: instructions
+      questionTemplate: all_at_once
+      questionSet:
+        - questionID: 1
+          questionText: question1
+          correctAnswer: 1a
+          answerOption:
+            - optionID: 1a
+              option: answera
+            - optionID: 1b
+              option: answerb
+            - optionID: 1c
+              option: answerc
+            - optionID: 1d
+              option: answerd
+            - optionID: 1e
+              option: answere
+            - optionID: 1f
+              option: answerf
+          correctHeader: correct
+          correctText: correct1Response
+          incorrectHeader: incorrect
+          incorrectText: incorrect1Response

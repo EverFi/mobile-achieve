@@ -1,0 +1,73 @@
+blocks:
+  - type: layout
+    path: grid/grid-dynamic
+    class: p-stack-top-xl
+    disableGap: row
+    regions:
+      - columns: 2
+        class: hidden-phone span-1-tablet
+      - columns: 4
+        class: span-6-tablet span-8-desktop
+        blocks:
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              {{#if pageHeader}}
+              - type: header
+                class: h1 m-stack-md{{#if align}}{{align}}{{else}}text-center{{/if}}
+                h1:
+                  - {{pageHeader}}
+              {{/if}}
+              {{#if subtitleText}}
+              - type: text
+                class: p1 font-color-neutral-900{{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{subtitleText}}
+              {{/if}}    
+          {{#if additional-text.enable}}
+          - type: container
+            blocks:
+              {{#if additional-text.blocks}} 
+              {{{yamlize additional-text.blocks 10}}}
+              {{/if}}
+          {{/if}}
+          {{#if instructionalText}}
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              - type: text
+                class: p1 font-color-neutral-900 {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{instructionalText}}
+          {{/if}}
+          - type: container
+            class: p-inset-squish-lg m-inline-left-md
+            blocks:
+          {{#each ordered-list}}
+              {{#if list-header}}
+              - type: header
+                class: h4
+                h2:
+                  - {{list-header}}
+              {{/if}}
+              {{#if blocks}} 
+              {{{yamlize blocks 10}}}
+              {{else}}
+              - type: text
+                class: p1 m-stack-lg
+                items:
+                  - description: {{#if list-text}}{{list-text}} {{/if}}
+              {{/if}}
+          {{/each}}
+          - type: container
+            class: p-inset-lg m-stack-top-sm 
+            blocks:      
+              - type: component
+                path: partial/molecules/navigate
+                class: m-none
+                parameters:
+                  direction: forward
+                  button_class: btn-block bg-color-neutral-900 border-radius-rounded m-stack-md custom-feedback
+                  text: continue
+                  sr_text: continue
+                  override_enabled: false

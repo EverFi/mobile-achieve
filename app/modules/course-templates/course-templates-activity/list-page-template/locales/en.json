@@ -1,0 +1,13 @@
+{
+  "course-templates": {
+    "course-templates-activity": {
+      "list-page-template": {
+        "listHeader1": "1. listHeader1",
+        "listHeader2": "2. listHeader2",
+        "listHeader3": "3. listHeader3",
+        "listHeader4": "4. listHeader4",
+        "listHeader5": "5. listHeader5"
+      }
+    }
+  }
+}

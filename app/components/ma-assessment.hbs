@@ -1,0 +1,139 @@
+blocks:
+  - type: layout
+    path: grid/grid-dynamic
+    class: p-stack-top-xl
+    disableGap: row
+    regions:
+      - columns: 2
+        class: hidden-phone span-1-tablet
+      - columns: 4
+        class: span-6-tablet span-8-desktop
+        blocks:
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              {{#if pageHeader}}
+              - type: header
+                class: h1 m-stack-md{{#if align}}{{align}}{{else}}text-center{{/if}}
+                h1:
+                  - {{pageHeader}}
+              {{/if}}
+              {{#if subtitleText}}
+              - type: text
+                class: p1 font-color-neutral-900 {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{subtitleText}}
+              {{/if}}    
+          {{#if additional-text.enable}}
+          - type: container
+            blocks:
+              {{#if additional-text.blocks}} 
+              {{{yamlize additional-text.blocks 10}}}
+              {{/if}}
+          {{/if}}
+          {{#if instructionalText}}
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              - type: text
+                class: p1 font-color-neutral-900 {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{instructionalText}}
+          {{/if}}
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              - type: assessment
+                template: {{questionTemplate}}
+                question_separator: seperatorLabel
+                question_caption: questionLabel
+                fade_speed: 1000
+                question_template: multiple_choice
+                allow_answer_change: true
+                must_pass: false
+                split_questions: {{split_questions}}
+                split_index_start: {{split_index_start}}
+                {{#if assessment_slug}}
+                assessment_slug: {{assessment_slug}}
+                {{/if}}
+                {{#unless assessment_slug}}
+                questions:
+                {{#each questionSet}}
+                  - id: {{questionID}}
+                    text: {{questionText}}
+                    correct_answer: {{#if correctAnswer}}{{correctAnswer}}{{/if}}
+                    answers:
+                    {{#each answerOption}}
+                      - id: {{optionID}}
+                        text: {{option}}
+                    {{/each}}
+                    feedback:
+                      region: response
+                      correct:
+                        blocks:
+                          - type: container
+                            flex: true
+                            justify: flex-start
+                            align: start
+                            wrap: no-wrap
+                            class: >-
+                              bg-color-success-light p-inset-md
+                            blocks:
+                              {{#unless noIcon}}
+                              - type: icon
+                                icon: fas fa-check-circle
+                                classes: font-color-success-base assessment-feedback__icon
+                              {{/unless}}  
+                              - type: container
+                                aria:
+                                  live: polite
+                                blocks:
+                                  - type: header
+                                    class: p1 bold m-stack-xxs
+                                    h2:
+                                      - {{correctHeader}}    
+                                  - type: text
+                                    class: p3 m-none
+                                    items:
+                                      - description: {{correctText}}
+                      incorrect:
+                        blocks:
+                          - type: container
+                            flex: true
+                            justify: flex-start
+                            align: start
+                            wrap: no-wrap
+                            class: >-
+                              bg-color-error-light p-inset-md
+                            blocks:
+                              {{#unless noIcon}}
+                              - type: icon
+                                icon: fas fa-times-circle
+                                classes: font-color-error-base assessment-feedback__icon
+                              {{/unless}}  
+                              - type: container
+                                aria:
+                                  live: polite
+                                blocks:
+                                  - type: header
+                                    class: p1 bold m-stack-xxs
+                                    h2:
+                                      - {{incorrectHeader}}    
+                                  - type: text
+                                    class: p3 m-none
+                                    items:
+                                      - description: {{incorrectText}}
+                {{/each}}
+                {{/unless}}                      
+          - type: container
+            class: p-inset-lg m-stack-top-lg 
+            blocks:      
+              - type: component
+                path: partial/molecules/navigate
+                class: m-none
+                parameters:
+                  direction: forward
+                  button_class: btn-block bg-color-neutral-900 border-radius-rounded m-stack-md custom-feedback
+                  text: continue
+                  sr_text: continue
+                  override_enabled: false

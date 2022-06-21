@@ -1,0 +1,10 @@
+blocks:
+  - type: component
+    path: ma-intro
+    parameters:
+      image: images/ma-keys.png
+      pageHeader: headerExample
+      moduleTime: moduleAndTime
+      pageDescription: description1
+      pageDescription2: description2
+      pageDescription3: description3

@@ -14,24 +14,40 @@
       "key": "course-templates-activity",
       "pages": [
         {
-          "key": "horizontal-split",
+          "key": "intro-page-template",
+          "title": "intro-page-template",
           "index": 1,
           "script": false
         },
         {
-          "key": "vertical-split",
+          "key": "assessment-page-template",
+          "title": "assessment-page-template",
           "index": 2,
           "script": false
         },
         {
-          "key": "full-bleed-card",
-          "script": false,
-          "index": 3
+          "key": "card-stack-game",
+          "title": "card-stack-game",
+          "index": 3,
+          "script": false
         },
         {
-          "key": "single-column",
-          "script": false,
-          "index": 4
+          "key": "carousel-page-template",
+          "title": "carousel-page-template",
+          "index": 4,
+          "script": false
+        },
+        {
+          "key": "dynamic-scroll-page-template",
+          "title": "dynamic-scroll-page-template",
+          "index": 5,
+          "script": false
+        },
+        {
+          "key": "list-page-template",
+          "title": "list-page-template",
+          "index": 6,
+          "script": false
         }
       ],
       "index": 1
