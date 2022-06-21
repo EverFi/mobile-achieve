@@ -25,8 +25,8 @@ blocks:
                 - description: unorderedList3
                 - description: unorderedList4
                 - description: unorderedList5
-              - type: text
-                items:
-                  - description: afterText2  
+            - type: text
+              items:
+                - description: afterText2  
 
 
