@@ -32,30 +32,36 @@
           "script": false
         },
         {
-          "key": "horizontal-split",
+          "key": "carousel-page-template",
+          "title": "carousel-page-template",
           "index": 4,
           "script": false
         },
         {
-          "key": "vertical-split",
+          "key": "list-page-template",
+          "title": "list-page-template",
           "index": 5,
+          "script": false
+        },
+        {
+          "key": "horizontal-split",
+          "index": 6,
+          "script": false
+        },
+        {
+          "key": "vertical-split",
+          "index": 7,
           "script": false
         },
         {
           "key": "full-bleed-card",
           "script": false,
-          "index": 6
+          "index": 8
         },
         {
           "key": "single-column",
           "script": false,
-          "index": 7
-        },
-        {
-          "key": "carousel-page-template",
-          "title": "carousel-page-template",
-          "index": 8,
-          "script": false
+          "index": 9
         }
       ],
       "index": 1

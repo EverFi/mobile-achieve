@@ -1,3 +1,17 @@
 blocks:
-  - type: container
-    blocks: []
+  - type: component
+    path: ma-carousel
+    parameters:
+      pageHeader: carouselTemplate
+      subtitleText: subtitle
+      instructionalText: instructions
+      carouselItem:
+        - img-path: images/placeholder.png
+          carousel-header: slideHeader1
+          carousel-text: slideText1
+        - img-path: images/placeholder.png
+          carousel-header: slideHeader2
+          carousel-text: slideText2
+        - img-path: images/placeholder.png
+          carousel-header: slideHeader3
+          carousel-text: slideText3    

@@ -40,17 +40,17 @@ blocks:
             blocks:
               {{#if pageDescription}}
               - type: text
-                class: subtitle m-none {{#if align}}{{align}}{{else}}text-left{{/if}}
+                class: p1 m-none font-color-neutral-900{{#if align}}{{align}}{{else}}text-left{{/if}}
                 items:
                   - description: {{pageDescription}}
-                    description_class: m-stack-sm
+                    description_class: m-stack-sm font-color-neutral-900
                   {{#if pageDescription2}}
                   - description: {{pageDescription2}}
-                    description_class: m-stack-sm
+                    description_class: m-stack-sm font-color-neutral-900
                   {{/if}}
                   {{#if pageDescription3}}
                   - description: {{pageDescription3}}
-                    description_class: m-stack-sm
+                    description_class: m-stack-sm font-color-neutral-900
                   {{/if}}
                 {{/if}}
           - type: container
