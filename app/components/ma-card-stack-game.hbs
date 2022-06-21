@@ -1,0 +1,109 @@
+blocks:
+  - type: layout
+    path: grid/grid-dynamic
+    class: p-stack-top-xl
+    disableGap: row
+    regions:
+      - columns: 2
+        class: hidden-phone span-1-tablet
+      - columns: 4
+        class: span-6-tablet span-8-desktop
+        blocks:
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              {{#if pageHeader}}
+              - type: header
+                class: h1 m-stack-md{{#if align}}{{align}}{{else}}text-center{{/if}}
+                h1:
+                  - {{pageHeader}}
+              {{/if}}
+              {{#if subtitleText}}
+              - type: text
+                class: subtitle {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{subtitleText}}
+              {{/if}}    
+          {{#if additional-text.enable}}
+          - type: container
+            blocks:
+              {{#if additional-text.blocks}} 
+              {{{yamlize additional-text.blocks 10}}}
+              {{/if}}
+          {{/if}}
+          {{#if instructionalText}}
+          - type: container
+            class: p-inset-squish-lg
+            blocks:
+              - type: text
+                class: p1 font-color-neutral-900 m-stack-md {{#if align}}{{align}}{{else}}text-left{{/if}}
+                items:
+                  - description: {{instructionalText}}
+          {{/if}}
+          - type: component
+            path: partial/organisms/card-stack-game
+            parameters:
+              id: {{card-stack-ID}}
+              card_class: elevation-2 border-radius-md bg-color-neutral-100
+              required: false
+              cards_to_show: {{cards_to_show}} {{! amount of cards to display}}
+              pass_score: {{pass_score}} {{! example 6}}
+              points_per_score: {{points_per_score}} {{! example 100}}
+              success_lottie: images/lottie/fireworks-success.json
+              failure_lottie: images/lottie/fireworks-fail.json
+              end_state_lottie_perfect: images/lottie/end-state-perfect.json
+              end_state_heading_perfect: {{endStateHeadingPerfect}}
+              end_state_body_perfect: {{endStateBodyPerfect}}
+              end_state_lottie_pass: images/lottie/end-state-passing.json
+              end_state_heading_pass: {{endStateHeadingPass}}
+              end_state_body_pass: {{endStateBodyPass}}
+              end_state_lottie_fail: images/lottie/end-state-fail.json
+              end_state_heading_fail: {{endStateHeadingFail}}
+              end_state_body_fail: {{endStateBodyFail}}
+              show_numeric_streak: true
+              progress_lottie: images/lottie/splat-star.json
+              progress_lottie_intro_length: {{progressLottieIntroLength}} {{! numberic value}}
+              progress_lottie_midpoint: {{progressLottieMidpoint}} {{! numberic value}}
+              progress_lottie_length: {{progressLottieLength}} {{! numberic value}}
+              score: {{score}}
+              streak: {{streak}}
+              show_facts: {{showFacts}}
+              failure_text_heading: {{failureTextHeading}}
+              continue_button_text: {{continueButtonText}}
+              facts: {{factsListHeading}}
+              fiction: {{fictionListHeading}}
+              replay:
+                button_text: {{replayButton}}
+              play: {{playText}}
+              how_to_play:
+                heading: {{howToPlay}}
+                body: {{howToPlayBody}}
+                body_class: p1 text-center
+                blocks:
+                  - type: icon
+                    icon: fal fa-chart-pie
+                    class: font-color-interactive-500 text-center m-stack-top-lg p-stack-lg
+                    size: fa-7x
+              false_button_text: {{falseButtonText}}
+              true_button_text: {{trueButtonText}}
+              heading_class: h3
+              incorrect_heading: {{notQuiteHeading}}
+              correct_heading: {{correctHeading}}
+              cards:
+                {{#each statements}}
+                - statement: {{statementText}}
+                  fact: {{factStatement}} {{! true or false}}
+                  feedback: {{statementFeedback}}
+                {{/each}}
+          - type: container
+            class: p-inset-lg m-stack-top-lg 
+            blocks:      
+              - type: component
+                path: partial/molecules/navigate
+                class: m-none
+                parameters:
+                  direction: forward
+                  button_class: btn-block bg-color-neutral-900 border-radius-rounded m-stack-md custom-feedback
+                  text: continue
+                  sr_text: continue
+                  override_enabled: false

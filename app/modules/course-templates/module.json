@@ -44,6 +44,12 @@
           "key": "single-column",
           "script": false,
           "index": 6
+        },
+        {
+          "key": "card-stack-game",
+          "title": "card-stack-game",
+          "index": 7,
+          "script": false
         }
       ],
       "index": 1
