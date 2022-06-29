@@ -3,7 +3,7 @@ version: 2.1
 setup: true
 
 orbs:
-  courses-v2: everfi/courses-v2@dev:alpha
+  courses-v2: everfi/courses-v2@1
 
 workflows:
   main:
