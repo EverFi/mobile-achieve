@@ -1,0 +1,24 @@
+{
+  "key": "identity-protection",
+  "title": "identity-protection",
+  "description": "Module",
+  "unlocked": true,
+  "index": 2,
+  "groupId": 0,
+  "id": "identity-protection",
+  "activities": [
+    {
+      "title": "identity protection activity",
+      "index": 1,
+      "key": "identity-protection-activity",
+      "pages": [
+        {
+          "key": "page-1",
+          "title": "page-1",
+          "index": 1,
+          "script": true
+        }
+      ]
+    }
+  ]
+}
