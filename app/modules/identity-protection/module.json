@@ -1,24 +1,61 @@
 {
   "key": "identity-protection",
-  "title": "identity-protection",
-  "description": "Module",
+  "title": "identityProtectionTitle",
+  "description": "identityProtectionDescription",
   "unlocked": true,
-  "index": 2,
+  "index": 0,
   "groupId": 0,
   "id": "identity-protection",
   "activities": [
     {
-      "title": "identity protection activity",
+      "title": "identityProtectionActivity",
       "index": 1,
       "key": "identity-protection-activity",
       "pages": [
         {
-          "key": "page-1",
-          "title": "page-1",
+          "key": "identity-theft",
+          "title": "identity-theft",
           "index": 1,
-          "script": true
+          "script": false
+        },
+        {
+          "key": "types-of-identity-fraud",
+          "title": "types-of-identity-fraud",
+          "index": 2,
+          "script": false
+        },
+        {
+          "key": "how-can-identity-theft-happen",
+          "title": "how-can-identity-theft-happen",
+          "index": 3,
+          "script": false
+        },
+        {
+          "key": "who-do-thieves-target",
+          "title": "who-do-thieves-target",
+          "index": 4,
+          "script": false
+        },
+        {
+          "key": "signs-of-identity-theft",
+          "title": "signs-of-identity-theft",
+          "index": 5,
+          "script": false
+        },
+        {
+          "key": "how-can-i-report-identity-theft",
+          "title": "how-can-i-report-identity-theft",
+          "index": 6,
+          "script": false
+        },
+        {
+          "key": "how-do-i-protect-my-identity",
+          "title": "how-do-i-protect-my-identity",
+          "index": 7,
+          "script": false
         }
       ]
     }
-  ]
+  ],
+  "info": null
 }

@@ -1,8 +1,13 @@
 {
   "identity-protection":{
     "defaults": {
+      "moduleTitle": "Identity Protection",
+      "moduleDescription": "Learn how to protect your identity and the steps to take if your personal information is stolen.",
+      "identityProtectionActivity": "Identity Protection Activity"
     }
   },
   "course": {
+    "identityProtectionTitle": "Identity Protection",
+      "identityProtectionDescription": "Learn how to protect your identity and the steps to take if your personal information is stolen."
   }
 }
