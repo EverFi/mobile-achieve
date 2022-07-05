@@ -2,6 +2,25 @@
   "identity-protection": {
     "identity-protection-activity": {
       "how-can-identity-theft-happen": {
+        "carouselTitle": "How can identity theft happen?",
+        "subtitle": "Identity fraud usually starts with identity theft. There are many ways your personal information can be stolen.",
+        "instructions": "Swipe to learn more.",
+        "slideHeader1": "Mail tampering",
+        "slideText1": "Someone steals your mail or changes your billing address without your knowledge.",
+        "slideHeader2": "Data breach",
+        "slideText2": "Your confidential information is stolen from a business, financial institution, college, or healthcare provider.",
+        "slideHeader3": "Personal theft",
+        "slideText3": "Your information is taken from a car or home burglary; or a stolen wallet, purse, or cell phone.",
+        "slideHeader4": "Dumpster diving",
+        "slideText4": "Your personal information is taken from your trash.",
+        "slideHeader5": "Hacking",
+        "slideText5": "Someone gains access to your digital information.",
+        "slideHeader6": "Skimming",
+        "slideText6": "A device attached to a card reader steals information stored on your credit or debit card magnetic strip.",
+        "slideHeader7": "Phishing",
+        "slideText7": "A tempting offer is sent in a text, email, or call.",
+        "slideHeader8": "Shoulder-surfing",
+        "slideText8": "Someone looks over your shoulder to steal a PIN or password."
       }
     }
   }

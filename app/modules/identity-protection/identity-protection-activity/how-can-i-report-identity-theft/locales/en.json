@@ -2,6 +2,22 @@
   "identity-protection": {
     "identity-protection-activity": {
       "how-can-i-report-identity-theft": {
+        "pageTitle": "Steps for dealing with identity fraud.",
+        "listHeader1": "1. Contain the fraud.",
+        "listText1": "Close or freeze accounts where the fraud occurred.",
+        "listHeader2": "2. Change logins, passwords, and PINs for all of your accounts.",
+        "listText2": "",
+        "listHeader3": "3 Alert credit bureaus.",
+        "listText3": "Contact one credit bureau. By law, the other two will be notified.",
+        "listHeader4": "4. Report to the Federal Trade Commission (FTC).",
+        "listText4": "You can file a complaint on www.IdentityTheft.gov.",
+        "listHeader5": "5. File a police report.",
+        "afterText1": "You will need:",
+        "unorderedList1": "A copy of the FTC Identity Theft Report.",
+        "unorderedList2": "A government-issued ID with a photo.",
+        "unorderedList3": "Proof of your address.",
+        "unorderedList4": "Any other proof of the theft.",
+        "unorderedList5": "Get a copy of the police report."
       }
     }
   }

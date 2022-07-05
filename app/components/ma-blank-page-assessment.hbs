@@ -12,6 +12,7 @@ blocks:
           - type: container
             class: p-inset-squish-lg
             blocks:
+          {{#if componentLessPage}}
               {{#if pageHeader}}
               - type: header
                 class: h1 m-stack-md{{#if align}}{{align}}{{else}}text-center{{/if}}
@@ -35,6 +36,7 @@ blocks:
                 items:
                   - description: {{instructionalText}}
             {{/if}}
+          {{else}}
               - type: assessment
                 template: {{questionTemplate}}
                 question_separator: seperatorLabel
@@ -117,9 +119,14 @@ blocks:
                                     items:
                                       - description: {{incorrectText}}
                 {{/each}}
-                {{/unless}}                      
+                {{/unless}}
+          {{/if}}
           - type: container
-            class: p-inset-lg m-stack-top-lg 
+            class: p-inset-squish-lg
+            min_height: 120px
+            blocks:
+          - type: container
+            class: p-inset-lg m-stack-top-xxl
             blocks:      
               - type: component
                 path: partial/molecules/navigate

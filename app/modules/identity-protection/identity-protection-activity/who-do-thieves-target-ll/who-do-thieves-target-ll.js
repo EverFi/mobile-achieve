@@ -1,7 +1,7 @@
 var BaseExtension = require('base-extension');
 var _ = window._ || require('lodash');
 
-var page1 = _.defaults({
+var who_do_thieves_target_ll = _.defaults({
   initialized: function(view) {
 
   },
@@ -24,5 +24,5 @@ var page1 = _.defaults({
   }
 }, BaseExtension);
 
-module.exports = page1;
+module.exports = who_do_thieves_target_ll;
 

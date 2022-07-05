@@ -3,7 +3,7 @@ blocks:
     path: ma-intro
     parameters:
       image: images/placeholder.png
-      pageTitle: pageHeader
+      pageHeader: pageTitle
       moduleTime: moduleAndTime
       pageDescription: description1
       pageDescription2: description2

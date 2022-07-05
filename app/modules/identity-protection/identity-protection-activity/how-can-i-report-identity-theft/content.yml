@@ -2,7 +2,7 @@ blocks:
   - type: component
     path: ma-list
     parameters:
-      pageHeader: listTemplate
+      pageHeader: pageTitle
       ordered-list:
         - list-header: listHeader1
           list-text: listText1
@@ -22,16 +22,12 @@ blocks:
                   items:
                     - description: afterText1
                 - type: list
-                  class: m-none
+                  class: p1 m-none
                   items:
                     - description: unorderedList1
                     - description: unorderedList2
                     - description: unorderedList3
                     - description: unorderedList4
                     - description: unorderedList5
-                - type: text
-                  class: p1
-                  items:
-                    - description: afterText2  
 
 

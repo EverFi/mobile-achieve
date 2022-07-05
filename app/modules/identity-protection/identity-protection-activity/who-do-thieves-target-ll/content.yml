@@ -1,0 +1,55 @@
+blocks:
+  - type: component
+    path: ma-blank-page-assessment
+    parameters:
+      componentLessPage: false
+      questionTemplate: one_at_a_time
+      questionSet:
+        - questionID: 1
+          questionText: question1
+          correctAnswer: 1a
+          answerOption:
+            - optionID: 1a
+              option: answerA
+            - optionID: 1b
+              option: answerB
+          correctHeader: correctHeader
+          correctText: correctFeedbackText1
+          incorrectHeader: incorrectHeader
+          incorrectText: incorrectFeedbackText1
+        - questionID: 2
+          questionText: question2
+          correctAnswer: 2a
+          answerOption:
+            - optionID: 2a
+              option: answerA
+            - optionID: 2b
+              option: answerB
+          correctHeader: correctHeader
+          correctText: correctFeedbackText2
+          incorrectHeader: incorrectHeader
+          incorrectText: incorrectFeedbackText2
+        - questionID: 3
+          questionText: question3
+          correctAnswer: 3f
+          answerOption:
+            - optionID: 3b
+              option: answerA
+            - optionID: 3b
+              option: answerB
+          correctHeader: correctHeader
+          correctText: correctFeedbackText3
+          incorrectHeader: incorrectHeader
+          incorrectText: incorrectFeedbackText3
+        - questionID: 4
+          questionText: question4
+          correctAnswer: 4b
+          answerOption:
+            - optionID: 4a
+              option: answerA
+            - optionID: 4b
+              option: answerB
+          correctHeader: correctHeader
+          correctText: correctFeedbackText4
+          incorrectHeader: incorrectHeader
+          incorrectText: incorrectFeedbackText4     

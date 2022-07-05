@@ -2,15 +2,15 @@ blocks:
   - type: component
     path: ma-dynamic-scroll
     parameters:
-      pageHeader: dynamic-scroll-template
+      pageHeader: pageTitle
       dynamic-container:
         - dynamicID: dC1
           fadeDuration: 1000
           fadeDelay: 200
           fadeOffset: 50
           firstContainer: true
-          dynamicHeader: pageHeader
-          dynamicText: containerText
+          dynamicHeader: pageHeader1
+          dynamicText: containerText1
         - dynamicID: dC2
           fadeDuration: 1000
           fadeDelay: 200
@@ -28,4 +28,16 @@ blocks:
           fadeDelay: 200
           fadeOffset: 50
           dynamicHeader: pageHeader4
-          dynamicText: containerText4 
+          dynamicText: containerText4
+        - dynamicID: dC3
+          fadeDuration: 1000
+          fadeDelay: 200
+          fadeOffset: 50
+          dynamicHeader: pageHeader5
+          dynamicText: containerText5
+        - dynamicID: dC4
+          fadeDuration: 1000
+          fadeDelay: 200
+          fadeOffset: 50
+          dynamicHeader: pageHeader6
+          dynamicText: containerText6   

@@ -2,6 +2,19 @@
   "identity-protection": {
     "identity-protection-activity": {
       "how-do-i-protect-my-identity": {
+        "pageTitle": "How do I protect my identity?",
+        "pageHeader1": "Practice password safety",
+        "containerText1": "Change your passwords every few months following strong password suggestions.",
+        "pageHeader2": "Be cautious online",
+        "containerText2": "Avoid using public Wi-Fi for sensitive documents or accessing online bank accounts and don’t follow links or download files from unknown or suspicious senders.",
+        "pageHeader3": "Secure your documents",
+        "containerText3": "Keep your sensitive information in a safe place. Don’t carry your Social Security card with you. Shred sensitive documents once you no longer need them; do not discard or recycle them.",
+        "pageHeader4": "Be aware of your surroundings",
+        "containerText4": "Cover the ATM keypad when entering your PIN and keep an eye out for “shoulder surfers” in public spaces who may be watching you key in your phone’s passcode or your credit card information.",
+        "pageHeader5": "Monitor",
+        "containerText5": "Monthly bills and credit card statements should always be checked for unauthorized use or other fraudulent activity.",
+        "pageHeader6": "Set alerts",
+        "containerText6": "There are free fraud alerts and many products and services you may consider that will keep an eye on your personal information."
       }
     }
   }

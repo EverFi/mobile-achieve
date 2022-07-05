@@ -50,11 +50,17 @@ blocks:
                   {{/if}}
                   {{#if pageDescription3}}
                   - description: {{pageDescription3}}
-                    description_class: m-stack-sm font-color-neutral-900
+                    description_class: m-none font-color-neutral-900
                   {{/if}}
                 {{/if}}
+  - type: layout
+    path: grid/grid-dynamic
+    disableGap: row
+    regions:
+      - columns: 4 
+        blocks:
           - type: container
-            class: p-inset-stretch-xl m-stack-top-lg
+            class: p-inset-lg
             blocks:      
               - type: component
                 path: partial/molecules/navigate
