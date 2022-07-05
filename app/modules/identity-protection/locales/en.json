@@ -1,0 +1,22 @@
+{
+  "identity-protection":{
+    "defaults": {
+      "moduleTitle": "Identity Protection",
+      "moduleDescription": "Learn how to protect your identity and the steps to take if your personal information is stolen.",
+      "identityProtectionActivity": "Identity Protection Activity"
+    }
+  },
+  "course": {
+    "identityProtectionTitle": "Identity Protection",
+      "identityProtectionDescription": "Learn how to protect your identity and the steps to take if your personal information is stolen.",
+      "identityProtection": {
+        "page1": "Identity Theft",
+        "page2": "Types of  Identity Fraud",
+        "page3": "How can identity theft happen?",
+        "page4": "Who do thieves target?",
+        "page5": "What are the signs of identity fraud?",
+        "page6": "Steps for dealing with identity fraud.",
+        "page7": "How do I protect my identity?"
+      }
+  }
+}

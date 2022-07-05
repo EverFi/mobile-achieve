@@ -33,15 +33,15 @@ blocks:
           {{/if}}
           {{#if instructionalText}}
           - type: container
-            class: p-inset-squish-lg
+            class: m-inline-left-lg
             blocks:
               - type: text
-                class: p1 font-color-neutral-900 m-stack-md {{#if align}}{{align}}{{else}}text-left{{/if}}
+                class: p1 font-color-neutral-900 {{#if align}}{{align}}{{else}}text-left{{/if}}
                 items:
                   - description: {{instructionalText}}
           {{/if}}
           - type: container
-            class: p-inset-squish-lg
+            class: m-inset-squish-lg p-none
             blocks:
               - type: component
                 path: partial/organisms/card-stack-game
@@ -63,11 +63,12 @@ blocks:
                   end_state_lottie_fail: images/lottie/end-state-fail.json
                   end_state_heading_fail: {{endStateHeadingFail}}
                   end_state_body_fail: {{endStateBodyFail}}
-                  show_numeric_streak: true
+                  show_numeric_streak: false
                   progress_lottie: images/lottie/splat-star.json
                   progress_lottie_intro_length: {{progressLottieIntroLength}} {{! numberic value}}
                   progress_lottie_midpoint: {{progressLottieMidpoint}} {{! numberic value}}
                   progress_lottie_length: {{progressLottieLength}} {{! numberic value}}
+                  hide_score: true
                   score: {{score}}
                   streak: {{streak}}
                   show_facts: {{showFacts}}

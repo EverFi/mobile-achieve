@@ -1,0 +1,46 @@
+{
+  "identity-protection": {
+    "identity-protection-activity": {
+      "signs-of-identity-theft": {
+        "pageTitle": "What are the signs of identity fraud?",
+        "subtitle": "Is this a sign of identity fraud? Select a response.",
+        "instructions": "Select a response.",
+        "perfectHeaderText": "Perfect!",
+        "perfectBodyText": "It’s important that you pay close attention to any suspicious activities in your name  in order to recognize the signs of identity fraud.",
+        "almostHeaderText": "Good job!",
+        "almostBodyText": "It’s important that you pay close attention to any suspicious activities in your name  in order to recognize the signs of identity fraud.",
+        "failHeaderText": "Almost there!",
+        "failBodyText": "It’s important that you pay close attention to any suspicious activities in your name  in order to recognize the signs of identity fraud.",
+        "scoreText": "Score",
+        "streakText": "Streak",
+        "showFactsText": "Show facts",
+        "failureHeadingText": "Not quite.",
+        "continueButtonText": "Next",
+        "factsListHeadingText": "Yes",
+        "fictionListHeadingText": "No",
+        "replayButtonText": "Replay",
+        "playText": "Play",
+        "howToPlayText": "How to play",
+        "howToPlayBodyText": "Is this a sign of identity fraud?",
+        "falseButtonText": "No",
+        "trueButtonText": "Yes",
+        "notQuiteHeadingText": "Not quite.",
+        "correctHeadingText": "Correct.",
+        "statementText1": "You notice unrecognized withdrawals from your financial accounts.",
+        "statementFeedbackText1": "Unrecognized withdrawals can be a sign of identity fraud.",
+        "statementText2": "You see charges on your credit or debit card that you did not make.",
+        "statementFeedbackText2": "Unrecognized charges can be a sign of identity fraud.",
+        "statementText3": "You receive statements from an unknown credit card.",
+        "statementFeedbackText3": "Statements from an unknown credit card can be a sign of identity fraud.",
+        "statementText4": "You have received notification of a data breach.",
+        "statementFeedbackText4": "Notification of a data breach is not necessarily a sign of identity fraud but could lead to it.",
+        "statementText5": "You have received suspicious emails, text messages, or phone calls asking for your personal information.",
+        "statementFeedbackText5": "A suspicious message asking for personal information is not necessarily a sign of identity fraud but could lead to it.",
+        "statementText6": "When you tried to file your taxes, there was already one submitted by someone else.",
+        "statementFeedbackText6": "Notice of your taxes already being filed can be a sign of identity fraud.",
+        "statementText7": "You have received a bill for a medical appointment, tests, or even medication that you do not recognize.",
+        "statementFeedbackText7": "Bills for medical expenses never requested can be a sign of identity fraud."
+      }
+    }
+  }
+}

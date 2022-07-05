@@ -1,0 +1,24 @@
+{
+  "identity-protection": {
+    "identity-protection-activity": {
+      "who-do-thieves-target-ll": {
+        "question1": "The number of identity theft crimes have increased for College students and those 65 years or older.",
+        "answerA": "True",
+        "answerB": "False",
+        "correctHeader": "That’s right!",
+        "correctFeedbackText1": "The number of thefts has increased dramatically since 2014 for both older adults and college students.",
+        "incorrectHeader": "Not quite.",
+        "incorrectFeedbackText1": "The number of thefts has increased dramatically since 2014 for both older adults and college students.",
+        "question2": "Households with incomes of $75,000 or more made up half of identity theft victims.",
+        "correctFeedbackText2": "Even though all households are targets for criminals, households with incomes of $75,000 or more have made up half of identity theft victims.",
+        "incorrectFeedbackText2": "Even though all households are targets for criminals, households with incomes of $75,000 or more have made up half of identity theft victims.",
+        "question3": "In most cases, identity theft is done by someone you know.",
+        "correctFeedbackText3": "4% of people did not know who stole their identity.",
+        "incorrectFeedbackText3": "94% of people did not know who stole their identity.",
+        "question4": "Most will find out by noticing fraudulent charges themselves.",
+        "correctFeedbackText4": "Most people don’t notice fraudulent charges but are more likely notified by a financial institution.",
+        "incorrectFeedbackText4": "Most people don’t notice fraudulent charges but are more likely notified by a financial institution."
+      }
+    }
+  }
+}

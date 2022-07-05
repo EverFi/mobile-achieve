@@ -1,0 +1,7 @@
+blocks:
+  - type: component
+    path: ma-blank-page-assessment
+    parameters:
+      componentLessPage: true
+      pageHeader: identityProtection.page4
+      subtitleText: subtitle

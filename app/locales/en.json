@@ -1,3 +1,7 @@
 {
-  "course": {}
+  "course": {
+    "explore": "Explore",
+    "seperatorLabel": "of",
+    "questionLabel": "Question"
+  }
 }

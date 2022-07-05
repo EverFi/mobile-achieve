@@ -1,0 +1,22 @@
+{
+  "identity-protection": {
+    "identity-protection-activity": {
+      "types-of-identity-fraud": {
+        "pageTitle": "Types of  Identity Fraud",
+        "subtitle": "Which type of fraud do you think thieves commit the most with stolen identities? ",
+        "instructions": "Select a response. ",
+        "question1": "",
+        "answerA": "Tax fraud to collect an illegal refund",
+        "answerB": "Bank fraud to access money or open loans",
+        "answerC": "Insurance fraud for medical services",
+        "answerD": "Utility fraud to open phone and electric accounts",
+        "answerE": "Credit card fraud for illegal purchases",
+        "answerF": "Benefit fraud to collect government payments",
+        "correctHeader": "That’s right!",
+        "correctFeedbackText": "Thieves commit benefit fraud to collect government payments the most, but note that all of these examples are happening daily.",
+        "incorrectHeader": "Not quite.",
+        "incorrectFeedbackText": "Thieves commit benefit fraud to collect government payments the most, but note that all of these examples are happening daily."
+      }
+    }
+  }
+}

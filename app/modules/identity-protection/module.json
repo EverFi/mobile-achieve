@@ -1,0 +1,68 @@
+{
+  "key": "identity-protection",
+  "title": "identityProtectionTitle",
+  "description": "identityProtectionDescription",
+  "unlocked": true,
+  "index": 0,
+  "groupId": 0,
+  "id": "identity-protection",
+  "activities": [
+    {
+      "title": "identityProtectionActivity",
+      "index": 1,
+      "key": "identity-protection-activity",
+      "pages": [
+        {
+          "key": "identity-theft",
+          "title": "identityProtection.page1",
+          "index": 1,
+          "script": false
+        },
+        {
+          "key": "types-of-identity-fraud",
+          "title": "identityProtection.page2",
+          "index": 2,
+          "script": false
+        },
+        {
+          "key": "how-can-identity-theft-happen",
+          "title": "identityProtection.page3",
+          "index": 3,
+          "script": false
+        },
+        {
+          "key": "who-do-thieves-target",
+          "title": "identityProtection.page4",
+          "index": 4,
+          "script": false
+        },
+        {
+          "key": "who-do-thieves-target-ll",
+          "title": "who-do-thieves-target-ll",
+          "hide_in_menu": true,
+          "index": 5,
+          "script": false
+        },
+        {
+          "key": "signs-of-identity-theft",
+          "title": "identityProtection.page5",
+          "index": 6,
+          "script": false
+        },
+        {
+          "key": "how-can-i-report-identity-theft",
+          "title": "identityProtection.page6",
+          "index": 7,
+          "script": false
+        },
+        {
+          "key": "how-do-i-protect-my-identity",
+          "title": "identityProtection.page7",
+          "index": 8,
+          "script": false
+        }
+      ]
+    }
+  ],
+  "info": null
+}

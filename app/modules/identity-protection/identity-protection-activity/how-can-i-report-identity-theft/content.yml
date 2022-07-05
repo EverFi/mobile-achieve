@@ -1,0 +1,33 @@
+blocks:
+  - type: component
+    path: ma-list
+    parameters:
+      pageHeader: pageTitle
+      ordered-list:
+        - list-header: listHeader1
+          list-text: listText1
+        - list-header: listHeader2
+          list-text: listText2
+        - list-header: listHeader3
+          list-text: listText3
+        - list-header: listHeader4
+          list-text: listText4
+        - list-header: listHeader5
+          blocks:
+            - type: container
+              class: m-inline-left-md
+              blocks:
+                - type: text
+                  class: p1
+                  items:
+                    - description: afterText1
+                - type: list
+                  class: p1 m-none
+                  items:
+                    - description: unorderedList1
+                    - description: unorderedList2
+                    - description: unorderedList3
+                    - description: unorderedList4
+                    - description: unorderedList5
+
+
